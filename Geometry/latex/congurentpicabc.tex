@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\usetikzlibrary{positioning,shapes.multipart, fit,backgrounds,calc}
+\usetikzlibrary{calc}
+%\usepackage{upgreek}
+%\usepackage{siunitx}
+\usepackage{tikz,tikz-3dplot} %Para fazer desenhos
+\usetikzlibrary{shapes.geometric,calc,angles,positioning,intersections,quotes,decorations,babel,patterns,fit}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+%\pgfplotsset{compat=1.11}
+
+
+\begin{document}
+	
+
+	\begin{tikzpicture}[scale=2,>=stealth,point/.style={draw,circle,fill = black,inner sep=0.5pt},]
+
+		\def\a{3}
+		\def\c{4}
+		\def\b{5}
+		\def\x{((\a^2+\c^2-\b^2)/(2*\a))}
+		\def\y{sqrt(\c^2-\x^2)}
+
+		\node (A) at ($({((\a^2+\c^2-\b^2)/(2*\a))},{sqrt(\c^2-\x^2)} )$)[point,label=below left:$A$] {};
+		\node (B) at (0, 0)[point,label=below left:$B$] {};
+		\node (C) at (\a, 0)[point,label=below right:$C$] {};
+		\node (M) at ($({\a/2}, 0)$)[point,label=above right:$M$] {};
+
+		\draw (A) -- node[left] {$\textrm{c}$} (B) -- node[below] {$\textrm{a}$} (C) -- node[above,xshift=2mm] {$\textrm{b}$} (A);
+		\draw (A)--(M);
+
+
+		\tkzMarkAngle[fill=orange!40,size=0.5cm,mark=](A,C,B)
+		\tkzMarkAngle[fill=orange!40,size=0.4cm,mark=](M,B,A)
+		\tkzMarkAngle[fill=green!40,size=0.5cm,mark=](B,A,C)
+		\tkzMarkAngle[fill=blue!20,size=.2](A,M,B)
+		\tkzMarkAngle[fill=red!20,size=.2](C,M,A)
+		\tkzLabelAngle[pos=0.45](A,C,B){$\gamma$}
+		\tkzLabelAngle[pos=0.65](A,B,C){$\beta$}
+		\tkzLabelAngle[pos=0.65](C,B,M){$\alpha$}
+		\tkzLabelAngle[pos=0.5](C,M,A){$\theta$}
+	\end{tikzpicture}
+\end{document}
