@@ -1,4 +1,6 @@
 \documentclass{beamer}
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 \usepackage{subfigure}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -10,6 +12,8 @@
 
 % for numbered equation
 \usepackage[utf8]{inputenc}
+
+\usepackage{tcolorbox}
 
 \title{\textbf{Solution For School Geometry Problems}}
 \author{Yogesh Choudhary}
@@ -55,9 +59,28 @@
 	    	\end{figure}
 	    \end{frame}   
         
+       \begin{frame}
+        \begin{figure}	
         
+            	\frametitle{Codes}
+        	\item[]
+        	\begin{tcolorbox}[colback=blue!5,colframe=blue!40!black,title=latex codes for figures a and b ]
+        		
+        	  ./figures/congurentpicabc2.pdf \\	
+        	  ./figures/congurentpicabc.pdf 
+        	\end{tcolorbox}
+        	
+        	\begin{tcolorbox}[colback=red!5,colframe=blue!40!black,title=python codes for figures a and b ]
+        		./codes/congurenttriangle.py \\	
+        		../codes/congurenttriangle2.py	 
+        	\end{tcolorbox}
+        \end{figure}
+        \end{frame}
+     
+     
         \begin{frame}
         	\frametitle{Ans.1}
+        	\begin{multicols}{2}
         	given that $\to$\\
         	
         	\begin{align}
@@ -72,9 +95,10 @@
         		\frac{BC}{2} = \frac{QR}{2} \\
         		BM = QN
         	\end{align}
-       	\end{frame}
+        %	\end{multicols}
+       	%\end{frame}
        
-       \begin{frame}
+       %\begin{frame}
        		from fig $\left[1\right]$ and $\left[2\right]$ ...
        	
        		\begin{align}
@@ -83,10 +107,12 @@
        			BM = QN\\
        			\implies  \Delta ABM \cong \Delta PQN
        		\end{align}
+       		\end{multicols}
        \end{frame}
        	
        	\begin{frame}
        		\frametitle{Ans.2}
+       		\begin{multicols}{2}
        		given that $\to$\\
        		\begin{align}
        			AM = PN
@@ -98,9 +124,9 @@
        			\frac{BC}{2} = \frac{QR}{2} \\
        			MC = NR
        		\end{align}	
-       	\end{frame}
+       	%\end{frame}
        
-     \begin{frame}
+    % \begin{frame}
      		from equation $\left(9\right)$...
      	\begin{align}
      		\Delta ABM \cong \Delta PQN 
@@ -111,7 +137,10 @@
      		\\
      		\angle AMC = \angle PNR
      	\end{align}
-     	
+     	\end{multicols}
+     \end{frame}
+     \begin{frame}
+     	\begin{multicols}{2}
      	from equation $\left(10\right)$,$\left(12\right)$ and $\left(16\right)$...
      	\begin{align}
      		AM = PN
@@ -124,9 +153,10 @@
      		\\
      		\implies AC = PR
      	\end{align}
-     \end{frame}
+     	
+    % \end{frame}
  
- 	\begin{frame}
+ %	\begin{frame}
  		from equation $\left(1\right)$,$\left(3\right)$ and $\left(21\right)$...
  	
  		\begin{align}
@@ -135,5 +165,6 @@
  			AC = QR\\
  			\implies  \Delta ABC \cong \Delta PQR
  		\end{align}
+ 		\end{multicols}
  	\end{frame}
 \end{document}
