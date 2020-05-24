@@ -5,6 +5,13 @@
 %\doublespacing
 \singlespacing
 
+\usepackage[latin1]{inputenc}                             
+%for table
+  \usepackage{color}                                             \usepackage{array}                                            
+  \usepackage{longtable}                                        
+  \usepackage{calc}                                             
+  \usepackage{multirow}                                           \usepackage{hhline}                                              \usepackage{ifthen}    
+
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
@@ -89,7 +96,7 @@ columns=fullflexible
 %}
 \renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
 
-
+\renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}}
 \begin{document}
 %
 
@@ -285,7 +292,7 @@ Solution For The School Geometry Problems
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
-
+ \def\inputGnumericTable{} 
 \begin{abstract}
 This document includes different problems and solution on geometry from trigonometry and algebra.It also provides the imformation about the python and latex codes of figures.
 
@@ -307,7 +314,15 @@ svn co https://github.com/yogi13995/yogesh_training/tree/master/Geometry/figures
 
 \section{Problem}
 %\subsection{The Right Angled Triangle}
-\input{./chapter/Problem1.tex}
+\input{./chapter/problem1.tex}
+
+\section{construction}
+\input{./chapter/construction.tex}
+
+\section{Solution}
+\input{./chapter/solution.tex}
+
+
 
 \end{document}
 

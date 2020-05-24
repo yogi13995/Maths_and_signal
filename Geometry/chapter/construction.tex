@@ -1,0 +1,104 @@
+\renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
+
+\renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}}
+\def\inputGnumericTable{} 
+\begin{enumerate}
+		\item
+		We have the values of all three sides of the triangle ABC and PQR so to construct  a triangle we need all three coordinates of A,B and C.
+		
+	\begin{table}[h!]
+		\begin{center}
+			\caption{table for the output.}
+			\label{tab:table1}
+			\input{./tables/inp.tex}
+		\end{center}
+	\end{table}
+		
+		\begin{align}
+		x = \frac{\left(a^2 + c^2 - b^2\right)}{2*a}
+		\\
+		y=\sqrt{c^2 - x^2}
+		\end{align}
+		
+		coordinates of A $\to$
+		
+		\begin{align}
+		x_A = x       		
+		\\
+		y_A = y
+		\end{align}	
+		coordinates of B $\to$
+		\begin{align}
+		x_B = 0       		
+		\\
+		y_B = 0
+		\end{align}
+		
+		coordinates of C $\to$
+		\begin{align}
+		x_C = a      		
+		\\
+		y_C = 0
+		\end{align}
+		
+		coordinates of M $\to$
+		\begin{align}
+		x_M = \frac{a}{2}       		
+		\\
+		y_M = 0
+		\end{align}
+		
+		
+			\begin{table}[h!]
+				\begin{center}
+					\caption{table for the output.}
+					\label{tab:table1}
+					\input{./tables/derived.tex}			
+				\end{center}
+			\end{table}
+	
+		
+		\item Let assume we have two triangles ABC and PQR $\to$\\	
+		\begin{figure}[!htb]
+			%\begin{minipage}{0.48\textwidth}
+			\centering
+			\includegraphics[width=1.5in]{./figures/congurentpicabc.pdf}
+			\caption{$\Delta$ ABC}
+			\label{fig:triangle}
+			%\end{minipage}
+		\end{figure}
+		
+		\begin{lstlisting}
+	./figures/congurentpicabc.pdf
+		\end{lstlisting}
+		
+		
+		
+		
+		
+		%\hfill
+		\begin{figure}[!htb]
+			%\begin{minipage}{0.48\textwidth}
+			\centering
+			\includegraphics[width=2.0in]{./figures/congurentpicabc2.pdf}
+			\caption{$\Delta$ PQR }
+			\label{fig:triangle2}
+			%\end{minipage}	
+		\end{figure}
+	\begin{lstlisting}
+    figures/congurentpicabc2.pdf
+	\end{lstlisting}
+		
+		
+		\begin{figure}[!htb]
+			%\begin{minipage}{0.48\textwidth}
+			\centering
+			\includegraphics[width=3.0in]{./codes/triangle.pdf}
+			\caption{$\Delta$ ABC}
+			\label{fig:triangle}
+			\begin{lstlisting}
+        ./figures/Triangle.pdf
+			\end{lstlisting}
+			%\end{minipage}
+		\end{figure}
+\end{enumerate}

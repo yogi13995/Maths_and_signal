@@ -10,6 +10,12 @@
 \usepackage{xfrac}
 \usepackage{nicefrac}
 
+\usepackage{color}                                             \usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                           \usepackage{hhline}                                              \usepackage{ifthen}    
+
+
 % for numbered equation
 \usepackage[utf8]{inputenc}
 
@@ -20,6 +26,8 @@
 
 
 \begin{document}
+	
+	\def\inputGnumericTable{}
 	\frame{
 			\titlepage
 		  }
@@ -36,8 +44,77 @@
 	  			\end{enumerate}
 	  	   \end{enumerate}	
   	      }	
+        
+       \begin{frame}
+       		\frametitle{Construction}
+       	\begin{enumerate}
+       		\item 
+       	
+       		\begin{multicols}{2}
+       				We have the values of all three sides of the triangle ABC and PQR so to construct  a triangle we need all three coordinates of A,B and C.
+       			
+       			
+       			
+       		\begin{table}[h!]
+       			\begin{center}
+       				\caption{table for the output.}
+       				\label{tab:table1}
+       				\input{inp.tex}
+       			\end{center}
+       		\end{table}
+       	
+       		\begin{align}
+       		x = \frac{\left(a^2 + c^2 - b^2\right)}{2*a}
+       		\\
+       		y=\sqrt{c^2 - x^2}
+       		\end{align}
+       		
+       		coordinates of A $\to$
+       		
+       		\begin{align}
+       		x_A = x       		
+       		\\
+       		y_A = y
+       		\end{align}	
+       		\end{multicols}			
+       	\end{enumerate}	
+       \end{frame}
 	  	
-	  	
+	  	\begin{frame}
+	  		\begin{multicols}{2}
+	  				coordinates of B $\to$
+	  			\begin{align}
+	  			x_B = 0       		
+	  			\\
+	  			y_B = 0
+	  			\end{align}
+	  			
+	  			coordinates of C $\to$
+	  			\begin{align}
+	  			x_C = a      		
+	  			\\
+	  			y_C = 0
+	  			\end{align}
+	  			
+	  			coordinates of M $\to$
+	  			\begin{align}
+	  			x_M = \frac{a}{2}       		
+	  			\\
+	  			y_M = 0
+	  			\end{align}
+	  			
+	  			
+	  			\begin{table}[h!]
+	  				\begin{center}
+	  					\caption{table for the output.}
+	  					\label{tab:table1}
+	  					\input{derived.tex}			
+	  				\end{center}
+	  			\end{table}
+	  			
+	  		\end{multicols}
+	  	\end{frame}
+  	
 	    \begin{frame}    	
 			\frametitle{Figures}
 	    		 Let assume we have two triangles as follows$\to$\\
@@ -45,15 +122,15 @@
 	    	\begin{figure}[!htb]
 	    		\begin{minipage}{0.48\textwidth}
 	    			\centering
-	    			\includegraphics[width=1.5in]{./figures/congurentpicabc.pdf}
-	    			\caption{a}
+	    			\includegraphics[width=2.0in]{./codes/triangle.pdf}
+	    			\caption{Triangle ABC}
 	    			\label{fig:triangle}
 	    		\end{minipage}
 	    		\hfill
 	    		\begin{minipage}{0.48\textwidth}
 	    			\centering
-	    			\includegraphics[width=1.5in]{./figures/congurentpicabc2.pdf}
-	    			\caption{b}
+	    			\includegraphics[width=1.0in]{./figures/congurentpicabc2.pdf}
+	    			\caption{Triangle PQR}
 	    			\label{fig:triangle2}
 	    		\end{minipage}	
 	    	\end{figure}
@@ -67,7 +144,8 @@
         	\begin{tcolorbox}[colback=blue!5,colframe=blue!40!black,title=latex codes for figures a and b ]
         		
         	  ./figures/congurentpicabc2.pdf \\	
-        	  ./figures/congurentpicabc.pdf 
+        	  ./figures/congurentpicabc.pdf \\
+        	   ./figures/triangle.pdf
         	\end{tcolorbox}
         	
         	\begin{tcolorbox}[colback=red!5,colframe=blue!40!black,title=python codes for figures a and b ]
@@ -89,7 +167,7 @@
         		BC = QR	
         	\end{align}
         	
-        	from equation $\left(3\right)$...
+        	from equation $\left(13\right)$...
         	
         	\begin{align}
         		\frac{BC}{2} = \frac{QR}{2} \\
@@ -118,7 +196,7 @@
        			AM = PN
        		\end{align}
        		
-       		from equation $\left(3\right)$...
+       		from equation $\left(13\right)$...
        		
        		\begin{align}
        			\frac{BC}{2} = \frac{QR}{2} \\
@@ -127,7 +205,7 @@
        	%\end{frame}
        
     % \begin{frame}
-     		from equation $\left(9\right)$...
+     		from equation $\left(19\right)$...
      	\begin{align}
      		\Delta ABM \cong \Delta PQN 
      		\\
@@ -157,7 +235,7 @@
     % \end{frame}
  
  %	\begin{frame}
- 		from equation $\left(1\right)$,$\left(3\right)$ and $\left(21\right)$...
+ 		from equation $\left(11\right)$,$\left(13\right)$ and $\left(31\right)$...
  	
  		\begin{align}
  			AB = PQ\\
