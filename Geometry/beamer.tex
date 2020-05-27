@@ -1,248 +1,248 @@
 \documentclass{beamer}
-\usepackage{multicol}
-\setlength{\columnsep}{1cm}
-\usepackage{subfigure}
-\usepackage{graphicx}
-\usepackage{caption}
-\usetheme{Antibes}
-%maths package
-\usepackage{amsmath}
-\usepackage{xfrac}
-\usepackage{nicefrac}
-
-\usepackage{color}                                             \usepackage{array}                                            
-\usepackage{longtable}                                        
-\usepackage{calc}                                             
-\usepackage{multirow}                                           \usepackage{hhline}                                              \usepackage{ifthen}    
-
-
-% for numbered equation
+\usepackage{listings}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
 \usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetheme{Boadilla}
 
-\usepackage{tcolorbox}
+\usetkzobj{all}
 
-\title{\textbf{Solution For School Geometry Problems}}
+\title{Solution For The School Geometry Problems}
 \author{Yogesh Choudhary}
-
-
+%\institute{Indian Institute of Technology, Bhilai.}
+\date{\today}
 \begin{document}
-	
-	\def\inputGnumericTable{}
-	\frame{
-			\titlepage
-		  }
-	  
-	 \frame{
-	  		\frametitle{Question}
-	  		\begin{enumerate}
-	  		\item 
-	  		\textbf{ Two sides AB and BC and median AM of one triangle ABC are respectively equal to sides PQ and QR and median PN of $\Delta$ PQR.Show that:}
-	  				
-	  			\begin{enumerate}
-	  				\item$\Delta$ ABM $\cong$ $\Delta$ PQN  
-	  				\item$\Delta$ ABC $\cong$ $\Delta$ PQR
-	  			\end{enumerate}
-	  	   \end{enumerate}	
-  	      }	
-        
-       \begin{frame}
-       		\frametitle{Construction}
-       	\begin{enumerate}
-       		\item 
-       	
-       		\begin{multicols}{2}
-       				We have the values of all three sides of the triangle ABC and PQR so to construct  a triangle we need all three coordinates of A,B and C.
-       			
-       			
-       			
-       		\begin{table}[h!]
-       			\begin{center}
-       				\caption{table for the output.}
-       				\label{tab:table1}
-       				\input{./tables/inp.tex}
-       			\end{center}
-       		\end{table}
-       	
-       		\begin{align}
-       		x = \frac{\left(a^2 + c^2 - b^2\right)}{2*a}
-       		\\
-       		y=\sqrt{c^2 - x^2}
-       		\end{align}
-       		
-       		coordinates of A $\to$
-       		
-       		\begin{align}
-       		x_A = x       		
-       		\\
-       		y_A = y
-       		\end{align}	
-       		\end{multicols}			
-       	\end{enumerate}	
-       \end{frame}
-	  	
-	  	\begin{frame}
-	  		\begin{multicols}{2}
-	  				coordinates of B $\to$
-	  			\begin{align}
-	  			x_B = 0       		
-	  			\\
-	  			y_B = 0
-	  			\end{align}
-	  			
-	  			coordinates of C $\to$
-	  			\begin{align}
-	  			x_C = a      		
-	  			\\
-	  			y_C = 0
-	  			\end{align}
-	  			
-	  			coordinates of M $\to$
-	  			\begin{align}
-	  			x_M = \frac{a}{2}       		
-	  			\\
-	  			y_M = 0
-	  			\end{align}
-	  			
-	  			
-	  			\begin{table}[h!]
-	  				\begin{center}
-	  					\caption{table for the output.}
-	  					\label{tab:table1}
-	  					\input{./tables/derived.tex}			
-	  				\end{center}
-	  			\end{table}
-	  			
-	  		\end{multicols}
-	  	\end{frame}
-  	
-	    \begin{frame}    	
-			\frametitle{Figures}
-	    		 Let assume we have two triangles as follows$\to$\\
-	    		 
-	    	\begin{figure}[!htb]
-	    		\begin{minipage}{0.48\textwidth}
-	    			\centering
-	    			\includegraphics[width=2.0in]{./codes/triangle.pdf}
-	    			\caption{Triangle ABC}
-	    			\label{fig:triangle}
-	    		\end{minipage}
-	    		\hfill
-	    		\begin{minipage}{0.48\textwidth}
-	    			\centering
-	    			\includegraphics[width=1.0in]{./figures/congurentpicabc2.pdf}
-	    			\caption{Triangle PQR}
-	    			\label{fig:triangle2}
-	    		\end{minipage}	
-	    	\end{figure}
-	    \end{frame}   
-        
-       \begin{frame}
-        \begin{figure}	
-        
-            	\frametitle{Codes}
-        	\item[]
-        	\begin{tcolorbox}[colback=blue!5,colframe=blue!40!black,title=latex codes for figures a and b ]
-        		
-        	  ./figures/congurentpicabc2.pdf \\	
-        	  ./figures/congurentpicabc.pdf \\
-        	   ./figures/triangle.pdf
-        	\end{tcolorbox}
-        	
-        	\begin{tcolorbox}[colback=red!5,colframe=blue!40!black,title=python codes for figures a and b ]
-        		./codes/congurenttriangle.py \\	
-        		../codes/congurenttriangle2.py	 
-        	\end{tcolorbox}
-        \end{figure}
-        \end{frame}
-     
-     
-        \begin{frame}
-        	\frametitle{Ans.1}
-        	\begin{multicols}{2}
-        	given that $\to$\\
-        	
-        	\begin{align}
-        		AB = PQ\\
-        		AM = PN\\
-        		BC = QR	
-        	\end{align}
-        	
-        	from equation $\left(13\right)$...
-        	
-        	\begin{align}
-        		\frac{BC}{2} = \frac{QR}{2} \\
-        		BM = QN
-        	\end{align}
-        %	\end{multicols}
-       	%\end{frame}
-       
-       %\begin{frame}
-       		from fig $\left[1\right]$ and $\left[2\right]$ ...
-       	
-       		\begin{align}
-       			AB = PQ\\
-       			AM = PN\\
-       			BM = QN\\
-       			\implies  \Delta ABM \cong \Delta PQN
-       		\end{align}
-       		\end{multicols}
-       \end{frame}
-       	
-       	\begin{frame}
-       		\frametitle{Ans.2}
-       		\begin{multicols}{2}
-       		given that $\to$\\
-       		\begin{align}
-       			AM = PN
-       		\end{align}
-       		
-       		from equation $\left(13\right)$...
-       		
-       		\begin{align}
-       			\frac{BC}{2} = \frac{QR}{2} \\
-       			MC = NR
-       		\end{align}	
-       	%\end{frame}
-       
-    % \begin{frame}
-     		from equation $\left(19\right)$...
-     	\begin{align}
-     		\Delta ABM \cong \Delta PQN 
-     		\\
-     		\implies \angle AMB = \angle PNQ
-     		\\
-     		180 - \angle AMB = 180 -  \angle PNQ
-     		\\
-     		\angle AMC = \angle PNR
-     	\end{align}
-     	\end{multicols}
-     \end{frame}
-     \begin{frame}
-     	\begin{multicols}{2}
-     	from equation $\left(10\right)$,$\left(12\right)$ and $\left(16\right)$...
-     	\begin{align}
-     		AM = PN
-     		\\
-     		MC = NR
-     		\\
-     		\angle AMC = \angle PNR
-     		\\
-     		\implies  \Delta AMC \cong \Delta PNR
-     		\\
-     		\implies AC = PR
-     	\end{align}
-     	
-    % \end{frame}
- 
- %	\begin{frame}
- 		from equation $\left(11\right)$,$\left(13\right)$ and $\left(31\right)$...
- 	
- 		\begin{align}
- 			AB = PQ\\
- 			BC = QR\\
- 			AC = QR\\
- 			\implies  \Delta ABC \cong \Delta PQR
- 		\end{align}
- 		\end{multicols}
- 	\end{frame}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+\section{Question}
+\begin{frame}
+\frametitle{Question}
+\begin{block}{Exercise 8.1(Q no.36)}
+Two sides AB and BC and median AM of one
+triangle ABC are respectively equal to sides PQ
+and QR and median PN of $\Delta$ PQR.Show that
+\newline
+\hyperlink{a}{\beamerbutton{a)$\Delta$ ABM $\cong$ $\Delta$ PQN}}
+\newline
+\hyperlink{b}{\beamerbutton{b)$\Delta$ ABC $\cong$ $\Delta$ PQR}}
+\newline
+
+\end{block}
+\end{frame}
+
+\section{\textbf{Construction}}
+\subsection*{Codesandfigures}
+\begin{frame}[fragile]
+\frametitle{Codes and Figures}
+\tiny
+\begin{flushleft}
+The python code for the figure is
+\begin{lstlisting}
+./code/Traingle.py
+\end{lstlisting}
+The latex- tikz code is
+\begin{lstlisting}
+./figs/triangle.tex
+\end{lstlisting}
+The above latex code can be compiled as standalone document
+\begin{lstlisting} 
+./figs/triangle_fig.tex
+\end{lstlisting}
+\end{flushleft}.
+%\begin{columns}
+%\column{0.5\textwidth}
+\begin{figure}
+\begin{minipage}{0.45\linewidth}
+\begin{subfigure}{0.5\textwidth}
+
+\begin{flushleft}
+
+\includegraphics[scale=0.275]{./figs/Triangle.eps}
+\caption{\tiny By Python}
+\end{flushleft}
+
+\end{subfigure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{subfigure}{0.5\textwidth}
+\begin{flushright}
+
+\resizebox{2.0\columnwidth}{!}{\input{./figs/triangle.tex}}
+\caption{\tiny By Latex-tikz}
+\end{flushright}
+\end{subfigure}
+\end{minipage}
+\end{figure}
+\end{frame}
+\subsection*{Construction methods}
+\begin{frame}[fragile]
+\footnotesize
+\frametitle{Construction method}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+The tables below are the values used for constructing the triangles in both Python and Latex-Tikz.
+\begin{table}[htbp]
+\centering
+  \resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{ |p{3cm}|p{3cm}|  }
+\hline
+ \multicolumn{2}{|c|}{Initial Input Values.} \\
+\hline
+a, p & 3\\
+\hline
+b, q & 5\\
+\hline
+c, r & 6\\
+\hline
+\end{tabular}
+\end{minipage}}
+\caption{\tiny To construct $\triangle ACB$ and $\triangle PQR$}
+\end{table}
+The steps for constructing $\triangle ACB$ are
+\newline
+$$(i)\vec{A}= \begin{pmatrix}3.33\\4.99\end{pmatrix}
+(ii)\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}
+(iii)\vec{C}=\begin{pmatrix}3\\0\end{pmatrix}$$
+\\
+$$(i)\vec{P}= \begin{pmatrix}8.33\\4.99\end{pmatrix}
+(ii)\vec{Q}=\begin{pmatrix}5\\5\end{pmatrix}
+(iii)\vec{R}=\begin{pmatrix}8\\0\end{pmatrix}$$
+\end{column}
+\begin{column}{0.5\textwidth}
+$$\vec{M}=(1/2)(\vec{B}+\vec{C})$$
+\\
+$$\vec{N}=(1/2)(\vec{Q}+\vec{R})$$
+\\
+$$\vec{M}=\begin{pmatrix}1.5\\0\end{pmatrix},\vec{N}=\begin{pmatrix}6.5\\0\end{pmatrix}$$
+\\
+
+\begin{table}[H]
+\centering
+\resizebox{0.5\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{ |p{3cm}|p{3cm}|  }
+\hline
+ \multicolumn{2}{|c|}{Derived Values for $triangle DCB$.} \\
+\hline
+$\vec{M}$ & $$\begin{pmatrix}1.5\\0\end{pmatrix}$$\\				
+\hline
+$\vec{N}$ & $$\begin{pmatrix}6.5\\0\end{pmatrix} $$\\
+\hline
+\end{tabular}
+\end{minipage}}
+\caption{\tiny To construct madians AN and PN}
+\end{table}
+\end{column}
+\end{columns}
+\end{frame}
+\section*{\textbf{Solution}}
+\begin{frame}[fragile]
+\footnotesize
+\frametitle{Solution}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+given that $\to$
+\\
+$$\norm{\vec{AB}}=\norm{\vec{PQ}}=c=r$$ 
+\\
+
+$$\norm{\vec{BC}}=\norm{\vec{QR}}=a=p$$ 
+\\
+
+$$\norm{\vec{AM}}=\norm{\vec{PN}}=m=n$$ 
+
+\end{column}
+\begin{column}{0.5\textwidth}
+Therefore $\to$
+\\
+
+$\vec{M}$  and $\vec{N}$ are the position vector of mid-point of $\vec{BC}$ and $\vec{QR}$ repectively .
+\newline
+$$\frac{1}{2}\norm{\vec{B}-\vec{C}} = \frac{1}{2}\norm{\vec{Q}-\vec{R}}$$
+\\
+$$\norm{\vec{B}-\vec{M}} = \norm{\vec{Q}-\vec{N}}$$
+\end{column}
+\end{columns}
+\end{frame}
+\subsection{a}
+\begin{frame}
+\frametitle{Solution a)}
+\footnotesize
+\label{a}
+from triangles ABM and PQR $\to$
+\\
+$$\norm{\vec{AB}}=\norm{\vec{PQ}}(given)$$
+\\
+$$\norm{\vec{AM}}=\norm{\vec{PN}}(given)$$
+\\
+$$\norm{\vec{M}-\vec{B}} = \norm{\vec{N}-\vec{Q}}$$(Both m and N are the mid points)
+\newline
+\\
+$\implies \triangle ABM$ and $\triangle PQN$ are congruent to each other by SSS congruency.
+\\
+Hence, proved
+\end{frame}
+\subsection*{\textbf{Solution_b}}
+\begin{frame}[fragile]
+	\footnotesize
+	\frametitle{Solution b)}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			given that $\to$
+			\\
+			$$\norm{\vec{AM}}=\norm{\vec{PN}}$$ 
+			\\
+			from triangle ABC and PQN $\to$
+			\\
+			$$\norm{\vec{M}-\vec{C}} = \norm{\vec{N}-\vec{R}}$$
+			\\
+			$$\because \Delta ABM \cong \Delta PQN $$
+			\\
+			$$180 - \angle AMB = 180 -  \angle PNQ$$
+			\\
+			$$\angle AMC = \angle PNR$$
+			
+		 from SAS congurancy $ \to$
+		 \\
+		 $$\Delta AMC \cong \Delta PNR$$
+			
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			Therefore $\to$
+			\\
+			$$ \norm{\vec{A}-\vec{C}} =\norm{\vec{P}-\vec{R}}$$
+			from triangle ABC and PQR $\to$
+			\\
+			$$\norm{\vec{A}-\vec{M}} = \norm{\vec{P}-\vec{N}}$$
+			\\
+			$$\norm{\vec{M}-\vec{C}} = \norm{\vec{N}-\vec{R}}$$
+			\\
+			$$\angle AMC = \angle PNR$$
+			\\
+		 from SAS congurancy $\to$
+		 
+		 $$ \Delta AMC \cong \Delta PNR$$
+		 \\Hence proved	
+		\end{column}
+	\end{columns}
+\end{frame}
+
 \end{document}

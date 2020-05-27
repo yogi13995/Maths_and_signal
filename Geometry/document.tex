@@ -5,23 +5,10 @@
 %\doublespacing
 \singlespacing
 
-\usepackage[latin1]{inputenc}                             
-%for table
-  \usepackage{color}                                             \usepackage{array}                                            
-  \usepackage{longtable}                                        
-  \usepackage{calc}                                             
-  \usepackage{multirow}                                           \usepackage{hhline}                                              \usepackage{ifthen}    
-
 %\usepackage{graphicx}
 %\usepackage{amssymb}
 %\usepackage{relsize}
 \usepackage[cmex10]{amsmath}
-%\usepackage{chngcntr}
-%\counterwithout{figure}{section}
-%\counterwithout{figure}{subsection}
-\usepackage[english]{babel}
-\usepackage{graphicx}
-%\usepackage{subcaption}
 %\usepackage{amsthm}
 %\interdisplaylinepenalty=2500
 %\savesymbol{iint}
@@ -44,6 +31,7 @@
 %\usepackage{algpseudocode}
 \usepackage{enumitem}
 \usepackage{mathtools}
+\usepackage{steinmetz}
 \usepackage{tikz}
 \usepackage{circuitikz}
 \usepackage{verbatim}
@@ -94,9 +82,7 @@ columns=fullflexible
 %frame=single, 
 %breaklines=true
 %}
-\renewcommand{\thefigure}{\arabic{section}.\arabic{subsection}.\arabic{figure}}
 
-\renewcommand{\thetable}{\arabic{section}.\arabic{subsection}.\arabic{table}}
 \begin{document}
 %
 
@@ -151,7 +137,7 @@ columns=fullflexible
 \newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
 \newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
 %\numberwithin{equation}{section}
-\numberwithin{equation}{subsection}
+%\numberwithin{equation}{subsection}
 %\numberwithin{problem}{section}
 %\numberwithin{definition}{section}
 \makeatletter
@@ -176,19 +162,10 @@ columns=fullflexible
 
 \vspace{3cm}
 
-\title{
-	%\logo{
-Solution For The School Geometry Problems
-	}
-
-\author{ Yogesh Choudhary%$^{*}$% <-this % stops a space
-%	\thanks{*The author is with the Department
-	%	of Electrical Engineering, Indian Institute of Technology, Hyderabad
-		%502285 India e-mail:  gadepall@iith.ac.in. All content in this manual is released under GNU GPL.  Free and open source.}
-	
-}	
+\title{Solution For The School Geometry Problems }
+\author{Yogesh Choudhary}
 %\title{
-%	\logo{Matrix Analysis through Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
+%	\logo{Matrix Analysis throughe  Octave}{\begin{center}\includegraphics[scale=.24]{tlc}\end{center}}{}{HAMDSP}
 %}
 
 
@@ -263,6 +240,7 @@ Solution For The School Geometry Problems
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
 %\renewcommand{\theequation}{\theenumi}
+\numberwithin{equation}{subsection}
 
 %\begin{abstract}
 %%\boldmath
@@ -292,16 +270,15 @@ Solution For The School Geometry Problems
 % For peerreview papers, this IEEEtran command inserts a page break and
 % creates the second title. It will be ignored for other modes.
 %\IEEEpeerreviewmaketitle
- \def\inputGnumericTable{} 
+
 \begin{abstract}
 This document includes different problems and solution on geometry from trigonometry and algebra.It also provides the imformation about the python and latex codes of figures.
-
 \end{abstract}
 
 Download all python codes from 
 %
 \begin{lstlisting}
-svn co https://github.com/yogi13995/yogesh_training/tree/master/Geometry/codes
+svn co svn co https://github.com/yogi13995/yogesh_training/tree/master/Geometry/codes
 \end{lstlisting}
 %
 and latex-tikz codes from 
@@ -313,15 +290,32 @@ svn co https://github.com/yogi13995/yogesh_training/tree/master/Geometry/figures
 
 
 \section{Problem}
-%\subsection{The Right Angled Triangle}
-\input{./chapter/problem1.tex}
-
-\section{construction}
-\input{./chapter/construction.tex}
-
+\input{./chapters/problem.tex}
+%In right triangle ABC, right angled at C, M is
+%the mid-point of hypotenuse AB. C is joined to
+%M and produced to a point D such that DM =
+%CM. Point D is joined to point B. Show that
+%
+%\begin{enumerate}[label = (\alph*)]
+%\item $\triangle  AMC  \cong   \triangle  BMD $
+%\item $\triangle DBC $ is a right angle.
+%\item $\triangle  DBC  \cong  \triangle  ABC $
+%\item $CM = \frac{1}{2} AB$
+%\end{enumerate}
+\section{Construction}
+\input{./chapters/constr.tex}
+%
+%
 \section{Solution}
-\input{./chapter/solution.tex}
-
+\input{./chapters/solution.tex}
+\subsection{Solution.a)}
+\input{./chapters/solution_a.tex}
+\subsection{Solution.b)}
+\input{./chapters/solution_b.tex}
+%\subsection{Sol.c)}
+%\input{./chapters/sol_c.tex}
+%\subsection{Sol.d)}
+%\input{chapters/sol_d.tex}
 
 
 \end{document}

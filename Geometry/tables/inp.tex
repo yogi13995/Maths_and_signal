@@ -123,7 +123,7 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	67pt+%
+	53pt+%
 	53pt+%
 0pt}
 \def\gumericNumCols{2}
@@ -144,7 +144,7 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{67pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 \ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
@@ -182,35 +182,29 @@
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\hhline{|--}
-	 \multicolumn{2}{|p{	\gnumericColA+%
-	\gnumericColB+%
-	\tabcolsep*2*1}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{   Input Table}}
-\\
-\hhline{|-|-|}
+\hhline{|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{  perameter}}
+	{\gnumericPB{\centering}\gnumbox{Parameter}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{   value}}
+	{\gnumericPB{\centering}\gnumbox{Value}}
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{a}}
+	{\gnumericPB{\centering}\gnumbox{a,p}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{3}}
+	{\gnumericPB{\centering}\gnumbox{3}}
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{b}}
+	{\gnumericPB{\centering}\gnumbox{p,q}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{5}}
+	{\gnumericPB{\centering}\gnumbox{5}}
 \\
 \hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{c}}
+	{\gnumericPB{\centering}\gnumbox{c,r}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedleft}\gnumbox[r]{4}}
+	{\gnumericPB{\centering}\gnumbox{6}}
 \\
 \hhline{|-|-|}
 \end{tabular}
