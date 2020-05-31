@@ -128,17 +128,15 @@ $$(i)\vec{P}= \begin{pmatrix}8.33\\4.99\end{pmatrix}
 (iii)\vec{R}=\begin{pmatrix}8\\0\end{pmatrix}$$
 \end{column}
 \begin{column}{0.5\textwidth}
-$$\vec{M}=(1/2)(\vec{B}+\vec{C})$$
-\\
-$$\vec{N}=(1/2)(\vec{Q}+\vec{R})$$
+$\vec{M}$ and $\vec{N}$ are the midpoints of BC and QR respectively 
 \\
 $$\vec{M}=\begin{pmatrix}1.5\\0\end{pmatrix},\vec{N}=\begin{pmatrix}6.5\\0\end{pmatrix}$$
 \\
 
 \begin{table}[H]
 \centering
-\resizebox{0.5\textwidth}{!}{\begin{minipage}{\textwidth}
-\begin{tabular}{ |p{3cm}|p{3cm}|  }
+\resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{ |p{2cm}|p{2cm}|  }
 \hline
  \multicolumn{2}{|c|}{Derived Values for $triangle DCB$.} \\
 \hline
@@ -161,13 +159,13 @@ $\vec{N}$ & $$\begin{pmatrix}6.5\\0\end{pmatrix} $$\\
 \begin{column}{0.5\textwidth}
 given that $\to$
 \\
-$$\norm{\vec{AB}}=\norm{\vec{PQ}}=c=r$$ 
+$$AB = PQ=c=r$$ 
 \\
 
-$$\norm{\vec{BC}}=\norm{\vec{QR}}=a=p$$ 
+$$BC=QR=a=p$$ 
 \\
 
-$$\norm{\vec{AM}}=\norm{\vec{PN}}=m=n$$ 
+$$AM=PN=m=n$$ 
 
 \end{column}
 \begin{column}{0.5\textwidth}
@@ -176,9 +174,8 @@ Therefore $\to$
 
 $\vec{M}$  and $\vec{N}$ are the position vector of mid-point of $\vec{BC}$ and $\vec{QR}$ repectively .
 \newline
-$$\frac{1}{2}\norm{\vec{B}-\vec{C}} = \frac{1}{2}\norm{\vec{Q}-\vec{R}}$$
+$$\frac{1}{2}BC= \frac{1}{2}QR$$
 \\
-$$\norm{\vec{B}-\vec{M}} = \norm{\vec{Q}-\vec{N}}$$
 \end{column}
 \end{columns}
 \end{frame}
@@ -189,60 +186,40 @@ $$\norm{\vec{B}-\vec{M}} = \norm{\vec{Q}-\vec{N}}$$
 \label{a}
 from triangles ABM and PQR $\to$
 \\
-$$\norm{\vec{AB}}=\norm{\vec{PQ}}(given)$$
+$$AB=PQ(given)$$
 \\
-$$\norm{\vec{AM}}=\norm{\vec{PN}}(given)$$
+$$AM=PN(given)$$
 \\
-$$\norm{\vec{M}-\vec{B}} = \norm{\vec{N}-\vec{Q}}$$(Both m and N are the mid points)
+$$MB =NQ$$(Both m and N are the mid points)
 \newline
 \\
 $\implies \triangle ABM$ and $\triangle PQN$ are congruent to each other by SSS congruency.
 \\
 Hence, proved
 \end{frame}
-\subsection*{\textbf{Solution_b}}
-\begin{frame}[fragile]
-	\footnotesize
+
+\subsection{a}
+\begin{frame}
 	\frametitle{Solution b)}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			given that $\to$
-			\\
-			$$\norm{\vec{AM}}=\norm{\vec{PN}}$$ 
-			\\
-			from triangle ABC and PQN $\to$
-			\\
-			$$\norm{\vec{M}-\vec{C}} = \norm{\vec{N}-\vec{R}}$$
-			\\
-			$$\because \Delta ABM \cong \Delta PQN $$
-			\\
-			$$180 - \angle AMB = 180 -  \angle PNQ$$
-			\\
-			$$\angle AMC = \angle PNR$$
-			
-		 from SAS congurancy $ \to$
-		 \\
-		 $$\Delta AMC \cong \Delta PNR$$
-			
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			Therefore $\to$
-			\\
-			$$ \norm{\vec{A}-\vec{C}} =\norm{\vec{P}-\vec{R}}$$
-			from triangle ABC and PQR $\to$
-			\\
-			$$\norm{\vec{A}-\vec{M}} = \norm{\vec{P}-\vec{N}}$$
-			\\
-			$$\norm{\vec{M}-\vec{C}} = \norm{\vec{N}-\vec{R}}$$
-			\\
-			$$\angle AMC = \angle PNR$$
-			\\
-		 from SAS congurancy $\to$
-		 
-		 $$ \Delta AMC \cong \Delta PNR$$
-		 \\Hence proved	
-		\end{column}
-	\end{columns}
+	\footnotesize
+	\label{b}
+		given that $\to$
+	\\
+	$$MC = NR$$ 
+	\\
+	$$\because \Delta ABM \cong \Delta PQN $$
+	\\
+	$$\implies \angle AMC = \angle PNR$$
+	
+	from SAS congurancy $ \to$
+	\\
+	$$\Delta AMC \cong \Delta PNR$$
+	\\
+	$$\implies AC = PR$$
+	\\
+	Thus from the triangle ABC ,PQR and by SSS congurancy 
+	$$\Delta ABC \cong \Delta PQR$$
+	\centering Hence proved
 \end{frame}
 
 \end{document}

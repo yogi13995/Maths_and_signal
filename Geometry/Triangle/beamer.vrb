@@ -1,0 +1,25 @@
+\footnotesize
+\frametitle{Solution}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+given that $\to$
+\\
+$$AB = PQ=c=r$$
+\\
+
+$$BC=QR=a=p$$
+\\
+
+$$AM=PN=m=n$$
+
+\end{column}
+\begin{column}{0.5\textwidth}
+Therefore $\to$
+\\
+
+$\vec{M}$  and $\vec{N}$ are the position vector of mid-point of $\vec{BC}$ and $\vec{QR}$ repectively .
+\newline
+$$\frac{1}{2}BC= \frac{1}{2}QR$$
+\\
+\end{column}
+\end{columns}

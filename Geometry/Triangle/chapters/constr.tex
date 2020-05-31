@@ -54,42 +54,34 @@
 %$\triangle ABC$ are 
 \begin{align}
 \label{eq:constr_a}
-x_1 = \frac{\left(a^2 + c^2 - b^2\right)}{2*a}
+x = \frac{\left(a^2 + c^2 - b^2\right)}{2*a}
 \\
-y_1 = \sqrt{c-1^2 - x^2}
+y = \sqrt{c^2 - x^2}
 \\
-x_2 = \frac{\left(p^2 + r^2 - q^2\right)}{2*p}
+\vec{A} &= \myvec{x \\ y}
 \\
-y_2 = \sqrt{r^2 - x_2^2}
-\\
-\myvec{\vec{A} & \vec{P}} &= \myvec{x_1  &  x_2 + 5\\ y_1 & y_2}
-\\
-\myvec{\vec{B} & \vec{Q}} &= \myvec{0  &  5\\ 0 & 0}
+\vec{B} &= \myvec{0 \\ 0}
 \\
 \label{eq:constr_c}
+\vec{C} &= \myvec{a  \\ 0 }
 \\
-\myvec{\vec{C} & \vec{R}} &= \myvec{a  &  p + 5\\ 0 & 0}
-\\
+\vec{P} &= \myvec{x+5 \\ y }
 \label{eq:constr_b}
 \end{align}
+Similarly we can get q and r
+\\
+
 $\because \vec{M}$ is the midpoint of $BC$ and $\vec{N}$ of $QR$,
 \begin{align}
-\vec{M}= \frac{\vec{B}+\vec{C}}{2}
+\vec{M} &= \frac{1}{2}\myvec{a\\0}
 \\
-\vec{N}= \frac{\vec{P}+\vec{Q}}{2}
-\\
-\myvec{\vec{M} & \vec{N}} &= \frac{1}{2}\myvec{a & p+10\\0 & 0}
-\label{eq:constr_m}
+\vec{N} &= \frac{1}{2}\myvec{a+5\\0}
 \end{align}
-
  
-
-The values are listed in 
 %\item List the  derived values.
 %\label{const:table2}
 %\\
-%\solution See  
-Table. \ref{table:table2} 
+%\solution See   
 \begin{table}[ht!]
 \centering
 \begin{tabular}{ |p{3cm}|p{3cm}|  }
@@ -105,12 +97,13 @@ $\vec{N}$ & $$\begin{pmatrix}6.5\\0\end{pmatrix} $$\\
 \label{table:table2}
 \end{table}
 %
-\item Draw Fig. \ref{fig:con_triangles}.	
+\item Drawing  Fig. \ref{fig:con_triangles}.	
 \\
-\solution The  following Python code generates Fig. \ref{fig:tri_sss_py}
+ The  following Python code generates Fig. \ref{fig:tri_sss_py}
+ \\
 %
 \begin{lstlisting}
-codes/Triangle.py
+./codes/Triangle.py
 \end{lstlisting}
 \begin{figure}[!ht]
 \centering
@@ -122,12 +115,12 @@ codes/Triangle.py
 %
 and the equivalent latex-tikz code generating Fig.2.1  is 
 \begin{lstlisting}
-figs/triangle.tex
+./figs/triangle.tex
 \end{lstlisting}
 %
 The above latex code can be compiled as a standalone document as
 \begin{lstlisting}
-figs/triangle_fig.tex
+./figs/triangle_fig.tex
 \end{lstlisting}
 
 %
