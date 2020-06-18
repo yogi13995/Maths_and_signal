@@ -6,31 +6,31 @@
 \\ finding out the $\vec SP$ and $\vec QP$...
 \\
 \begin{align}
-	\vec {SP} = \vec P - \vec S = \myvec{3 +2\\0+1}
+	\vec P - \vec S = \myvec{3 +2\\0+1}
 	\\ = \myvec{5\\1}
 	\\
-	\vec {PQ} = \vec Q - \vec P = \myvec{4-3\\5-0}
+    \vec Q - \vec P = \myvec{4-3\\5-0}
 	\\ = \myvec{1\\5}
 \end{align}
 
 \begin{figure}[!ht]
 	\centering
-	\includegraphics[width=\columnwidth]{./figures/quad.eps}
+	\includegraphics[width=\columnwidth]{./figures/quadrilateral/quad.eps}
 	\caption{quadrilateral }
 	\label{fig:quadrilateral}
 \end{figure}
 \begin{lstlisting}
-codes/quad.py
+codes/quadrilateral/quad.py
 \end{lstlisting}
 
 $\vec S$ Area of the rhombus can be calculated as follows 
 \\
 \begin{align}
-	\norm{\Delta} =abs\norm{ \mathbf{\vec{SP}} \times \mathbf{\vec{PQ}}}
+	\norm{\Delta} =\norm{ \mathbf{\left(\vec P - \vec S\right)} \times \mathbf{\left(\vec Q - \vec P\right)}}
 	\\
-	\norm{\Delta} = abs\norm{ \mathbf{\myvec{5\\1}} \times \mathbf{\myvec{1\\5}}}
+	\norm{\Delta} = \norm{ \mathbf{\myvec{5\\1}} \times \mathbf{\myvec{1\\5}}}
 	\\
-	\norm{\Delta} = 5*5 - 1*1
+	\norm{\Delta} = 5 \times 5 - 1 \times 1
 	\\
 	\norm{\Delta} = 24
 \end{align}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  15 JUN 2020 17:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  18 JUN 2020 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,13 +1181,13 @@ Package multicol Warning: May not work with the twocolumn option on input line
 ) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(./document1.aux)
+No file document1.aux.
 \openout1 = `document1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 86.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 86.
 
- (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 86.
@@ -1262,8 +1262,6 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 86.
 LaTeX Info: Redefining \pageref on input line 86.
 LaTeX Info: Redefining \nameref on input line 86.
-
-(./document1.out) (./document1.out)
 \@outlinefile=\write4
 \openout4 = `document1.out'.
 
@@ -1317,8 +1315,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--11
 
  []
 
-File: ./figures/triangle.eps Graphic file (type eps)
-<./figures/triangle.eps>) (./chapters/quadrilateral/problem.tex)
+File: ./figures/triangle/triangle.eps Graphic file (type eps)
+<./figures/triangle/triangle.eps>) (./chapters/quadrilateral/problem.tex)
 (./chapters/quadrilateral/solution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
@@ -1328,22 +1326,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--8
 
 
 ]
-File: ./figures/quad.eps Graphic file (type eps)
- <./figures/quad.eps>
+File: ./figures/quadrilateral/quad.eps Graphic file (type eps)
+ <./figures/quadrilateral/quad.eps>
 Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
 ) (./chapters/line/point_and_vector/problem.tex)
 (./chapters/line/point_and_vector/solution.tex
-File: ./figures/quad1.eps Graphic file (type eps)
- <./figures/quad1.eps> [2]
-File: ./figures/quad2.eps Graphic file (type eps)
+File: ./figures/line/quads/quad1.eps Graphic file (type eps)
 
-<./figures/quad2.eps>) (./chapters/line/point_on_line/problem.tex)
+<./figures/line/quads/quad1.eps> [2]
+File: ./figures/line/quads/quad2.eps Graphic file (type eps)
+ <./figures/line/quads/quad2.eps>)
+(./chapters/line/point_on_line/problem.tex)
 (./chapters/line/point_on_line/solution.tex
-File: ./figures/point_on_line.eps Graphic file (type eps)
- <./figures/point_on_line.eps>)
+File: ./figures/line/point_on_line/point_on_line.eps Graphic file (type eps)
+
+<./figures/line/point_on_line/point_on_line.eps>)
 (./chapters/line/lines_and_plane/problem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
@@ -1369,72 +1369,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--16
 
  []
 
-File: ./figures/plane_and_line1.eps Graphic file (type eps)
-<./figures/plane_and_line1.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ./figures/plane_and_line2.eps Graphic file (type eps)
 
-<./figures/plane_and_line2.eps>
-File: ./figures/plane_and_line3.eps Graphic file (type eps)
- <./figures/plane_and_line3.eps> [4]
-Underfull \hbox (badness 10000) in paragraph at lines 77--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 91--95
-
- []
-
-File: ./figures/plane_and_line4.eps Graphic file (type eps)
-<./figures/plane_and_line4.eps>
-Underfull \hbox (badness 10000) in paragraph at lines 114--118
+Underfull \hbox (badness 10000) in paragraph at lines 76--80
 
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ./figures/plane_and_line5.eps Graphic file (type eps)
+ [4]
+File: ./figures/line/lines_and_planes/lines_and_planes.eps Graphic file (type e
+ps)
 
-<./figures/plane_and_line5.eps>
-File: ./figures/plane_and_line6.eps Graphic file (type eps)
- <./figures/plane_and_line6.eps> [5]
-File: ./figures/plane_and_line7.eps Graphic file (type eps)
-
-<./figures/plane_and_line7.eps>
-File: ./figures/plane_and_line8.eps Graphic file (type eps)
- <./figures/plane_and_line8.eps>)
+<./figures/line/lines_and_planes/lines_and_planes.eps>)
 (./chapters/line/motion/problem.tex) (./chapters/line/motion/solution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-[6]
-File: ./figures/motion.eps Graphic file (type eps)
- <./figures/motion.eps>) (./chapters/line/matrix/problem.tex
+
+Underfull \vbox (badness 2478) has occurred while \output is active []
+
+File: ./figures/line/motion/motion.eps Graphic file (type eps)
+
+<./figures/line/motion/motion.eps>) (./chapters/line/matrix/problem.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--8
 
  []
 
-
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
 ) (./chapters/line/matrix/solution.tex
-Underfull \hbox (badness 10000) in paragraph at lines 14--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--26
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
 
@@ -1442,51 +1434,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--26
 (./chapters/line/determinent/solution.tex)
 (./chapters/line/linear_inequalities/problem.tex)
 (./chapters/line/linear_inequalities/solution.tex)
-(./chapters/circle/problem.tex [7]) (./chapters/circle/solution.tex
-File: ./figures/circle.eps Graphic file (type eps)
+(./chapters/circle/problem.tex) (./chapters/circle/solution.tex
+File: ./figures/circle/circle.eps Graphic file (type eps)
 
-<./figures/circle.eps>) (./chapters/conics/problem.tex)
+<./figures/circle/circle.eps> [6]) (./chapters/conics/problem.tex)
 (./chapters/conics/solution.tex
-File: ./figures/perabola1.eps Graphic file (type eps)
- <./figures/perabola1.eps>
-File: ./figures/perabola2.eps Graphic file (type eps)
+File: ./figures/conics/perabola1.eps Graphic file (type eps)
+ <./figures/conics/perabola1.eps>
+File: ./figures/conics/perabola2.eps Graphic file (type eps)
 
-<./figures/perabola2.eps> [8]
-File: ./figures/perabola3.eps Graphic file (type eps)
- <./figures/perabola3.eps>
-File: ./figures/perabola4.eps Graphic file (type eps)
+<./figures/conics/perabola2.eps> [7]
+File: ./figures/conics/perabola3.eps Graphic file (type eps)
+ <./figures/conics/perabola3.eps>
+File: ./figures/conics/perabola4.eps Graphic file (type eps)
 
-<./figures/perabola4.eps>
+<./figures/conics/perabola4.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ./figures/perabola5.eps Graphic file (type eps)
+ [8]
+File: ./figures/conics/perabola5.eps Graphic file (type eps)
 
-<./figures/perabola5.eps>
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-File: ./figures/perabola6.eps Graphic file (type eps)
-
-<./figures/perabola6.eps>)
+<./figures/conics/perabola5.eps>
+File: ./figures/conics/perabola6.eps Graphic file (type eps)
+ <./figures/conics/perabola6.eps>) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
- [10
-
-]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
- (./document1.aux)
+
+(./document1.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 326.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
-Package rerunfilecheck Info: File `document1.out' has not changed.
-(rerunfilecheck)             Checksum: 5A3D6715D394932B0DC9A4E5A91BD308;2059.
+
+
+Package rerunfilecheck Warning: File `document1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `document1.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  5A3D6715D394932B0DC9A4E5A91BD308;2059.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
  ) 
 Here is how much of TeX's memory you used:
- 31189 strings out of 492983
- 664206 string characters out of 6134922
- 891124 words of memory out of 5000000
- 34110 multiletter control sequences out of 15000+600000
+ 31125 strings out of 492983
+ 663241 string characters out of 6134922
+ 887332 words of memory out of 5000000
+ 34052 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,15n,67p,497b,1131s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,15n,67p,497b,1552s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document1.dvi (10 pages, 93332 bytes).
+Output written on document1.dvi (9 pages, 93536 bytes).
