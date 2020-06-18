@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  18 JUN 2020 11:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  19 JUN 2020 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1443,20 +1443,23 @@ File: ./figures/conics/perabola1.eps Graphic file (type eps)
  <./figures/conics/perabola1.eps>
 File: ./figures/conics/perabola2.eps Graphic file (type eps)
 
-<./figures/conics/perabola2.eps> [7]
-File: ./figures/conics/perabola3.eps Graphic file (type eps)
- <./figures/conics/perabola3.eps>
-File: ./figures/conics/perabola4.eps Graphic file (type eps)
-
-<./figures/conics/perabola4.eps>
+<./figures/conics/perabola2.eps>
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [8]
+ [7]
+File: ./figures/conics/perabola3.eps Graphic file (type eps)
+
+<./figures/conics/perabola3.eps>
+File: ./figures/conics/perabola4.eps Graphic file (type eps)
+ <./figures/conics/perabola4.eps>
 File: ./figures/conics/perabola5.eps Graphic file (type eps)
 
-<./figures/conics/perabola5.eps>
+<./figures/conics/perabola5.eps> [8]
 File: ./figures/conics/perabola6.eps Graphic file (type eps)
- <./figures/conics/perabola6.eps>) [9]
+ <./figures/conics/perabola6.eps>
+Underfull \vbox (badness 4846) has occurred while \output is active []
+
+) [9]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
 
@@ -1480,10 +1483,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
 Here is how much of TeX's memory you used:
  31125 strings out of 492983
  663241 string characters out of 6134922
- 887332 words of memory out of 5000000
+ 887329 words of memory out of 5000000
  34052 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,15n,67p,497b,1552s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document1.dvi (9 pages, 93536 bytes).
+Output written on document1.dvi (9 pages, 91108 bytes).
