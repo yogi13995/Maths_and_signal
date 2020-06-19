@@ -5,14 +5,6 @@ import math
 import subprocess
 import shlex
 
-#sides of triangle
-a = 3
-b = 5
-c = 6
-
-#coordinates of A
-x=(a**2 + c**2 -b**2)/(2*a)
-y=np.sqrt(c**2-x**2)
 
 #generating the line points
 def line_gen(A,B):

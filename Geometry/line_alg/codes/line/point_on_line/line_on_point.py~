@@ -4,14 +4,7 @@ import matplotlib.pyplot as plt
 import subprocess
 import shlex
 
-#sides of triangle
-a = 3
-b = 5
-c = 6
 
-#coordinates of A
-x=(a**2 + c**2 -b**2)/(2*a)
-y=np.sqrt(c**2-x**2)
 
 #generating the line points
 def line_gen(A,B):
@@ -61,6 +54,6 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid()
 plt.axis('equal')
-plt.savefig('../figures/line/lipoint_on_line.eps')
+plt.savefig('../figures/line/point_on_line/point_on_line.eps')
 
 plt.show()
