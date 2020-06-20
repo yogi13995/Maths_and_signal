@@ -22,6 +22,6 @@ plt.grid(alpha=1,linestyle='--')
 
 # Add a Legend
 plt.legend()
-plt.savefig('../figures/motion.eps')
+plt.savefig('../../../figures/motion.eps')
 # Show the plot
 plt.show()

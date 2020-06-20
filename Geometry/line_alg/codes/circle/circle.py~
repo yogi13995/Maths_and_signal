@@ -48,8 +48,8 @@ plt.grid() # minor
 plt.axis('equal')
 
 #if using termux
-plt.savefig('../figures/circle/circle.eps')
-#subprocess.run(shlex.split("termux-open ./figs/circle/circumcircle.pdf"))
+plt.savefig('../../figures/circle/circle.eps')
+#subprocess.run(s/hlex.split("termux-open ./figs/circle/circumcircle.pdf"))
 #else
 plt.show()
 

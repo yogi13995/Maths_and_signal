@@ -98,6 +98,6 @@ plt.grid(alpha=1,linestyle='--')
 
 # Add a Legend
 plt.legend()
-plt.savefig('../figures/line/lines_and_planes/lines_and_planes.eps')
+plt.savefig('../../../figures/line/lines_and_planes/lines_and_planes.eps')
 # Show the plot
 plt.show()

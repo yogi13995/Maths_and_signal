@@ -61,6 +61,6 @@ plt.legend(loc='best')
 plt.savefig('../figures/line/quad/quad3.eps')
 plt.grid()
 plt.axis('equal')
-plt.savefig('../figures/line/quads/quad3.eps')
+plt.savefig('../../../figures/line/quads/quad3.eps')
 
 plt.show()

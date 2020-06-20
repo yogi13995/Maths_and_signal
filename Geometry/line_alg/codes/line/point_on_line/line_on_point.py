@@ -54,6 +54,6 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid()
 plt.axis('equal')
-plt.savefig('../figures/line/point_on_line/point_on_line.eps')
+plt.savefig('../../../figures/line/point_on_line/point_on_line.eps')
 
 plt.show()

@@ -56,6 +56,6 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid()
 plt.axis('equal')
-plt.savefig('../figures/triangle/triangle.eps')
+plt.savefig('../../figures/triangle/triangle.eps')
 
 plt.show()

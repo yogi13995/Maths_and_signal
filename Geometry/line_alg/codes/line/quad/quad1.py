@@ -60,6 +60,6 @@ plt.ylabel('$y$')
 plt.legend(loc='best')
 plt.grid()
 plt.axis('equal')
-plt.savefig('../figures/line/quads/quad1.eps')
+plt.savefig('../../../figures/line/quads/quad1.eps')
 
 plt.show()
