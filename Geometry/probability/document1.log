@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  25 JUN 2020 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.5.13)  1 JUL 2020 21:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1302,8 +1302,10 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 4.
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
-))
-(./chapters/probabilities/problem2/question.tex
+)
+File: ./figures/prob/prob1.eps Graphic file (type eps)
+
+<./figures/prob/prob1.eps>) (./chapters/probabilities/problem2/question.tex
 Underfull \hbox (badness 6995) in paragraph at lines 4--5
 \OT1/txr/m/n/12 ran-domly, and the fol-low-ing data were
  []
@@ -1318,7 +1320,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--13
 
  []
 
-) (./chapters/probabilities/problem2/solution.tex
+) (./chapters/probabilities/problem2/solution.tex [1
+
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 16--18
 
  []
@@ -1329,17 +1334,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--30
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
-
-]
 Overfull \hbox (1.56346pt too wide) detected at line 46
 []
  []
 
-) (./chapters/probabilities/problem3/question.tex
+File: ./figures/prob/prob2.eps Graphic file (type eps)
+<./figures/prob/prob2.eps>) (./chapters/probabilities/problem3/question.tex
+File: ./figures/prob/prob3.eps Graphic file (type eps)
+
+<./figures/prob/prob3.eps>) (./chapters/probabilities/problem3/solution.tex)
+(./chapters/probabilities/problem4/question.tex
 Underfull \hbox (badness 5064) in paragraph at lines 4--5
 \OT1/txr/m/n/12 times with the fol-low-ing fre-quen-cies of
  []
@@ -1359,8 +1363,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--15
 
  []
 
-) (./chapters/probabilities/problem3/solution.tex)
-(./chapters/probabilities/problem4/question.tex
+[2]) (./chapters/probabilities/problem4/solution.tex
+File: ./figures/prob/prob4.eps Graphic file (type eps)
+
+<./figures/prob/prob4.eps>) (./chapters/probabilities/problem5/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--20
 
  []
@@ -1370,20 +1376,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-) (./chapters/probabilities/problem4/solution.tex
+) (./chapters/probabilities/problem5/solution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--15
 
  []
 
-) (./chapters/probabilities/problem5/question.tex)
-(./chapters/probabilities/problem5/solution.tex [2]
+File: ./figures/prob/prob5.eps Graphic file (type eps)
+<./figures/prob/prob5.eps>) (./chapters/probabilities/problem6/question.tex
+[3]) (./chapters/probabilities/problem6/solution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
-) (./chapters/probabilities/problem6/question.tex
+File: ./figures/prob/prob6.eps Graphic file (type eps)
+<./figures/prob/prob6.eps>) (./chapters/probabilities/problem7/question.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
-LaTeX Warning: Reference `multicolumn_table' on page 3 undefined on input line 
+ []
+
+
+Overfull \hbox (12.0pt too wide) in paragraph at lines 6--13
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--13
+
+ []
+
+
+Underfull \hbox (badness 1527) in paragraph at lines 14--18
+[]\OT1/txr/m/n/12 What is the em-pir-i-cal prob-a-bil-ity that an
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--18
+
+ []
+
+) (./chapters/probabilities/problem7/solution.tex [4]
+File: ./figures/prob/prob7.eps Graphic file (type eps)
+
+<./figures/prob/prob7.eps>) (./chapters/probabilities/problem8/question.tex
+
+LaTeX Warning: Reference `multicolumn_table' on page 5 undefined on input line 
 5.
 
 Missing character: There is no â in font txr!
@@ -1392,7 +1428,7 @@ Missing character: There is no “ in font txr!
 Missing character: There is no â in font txr!
 Missing character: There is no € in font txr!
 Missing character: There is no “ in font txr!
-) (./chapters/probabilities/problem6/solution.tex
+) (./chapters/probabilities/problem8/solution.tex
 Underfull \hbox (badness 10000) in paragraph at lines 10--12
 
  []
@@ -1412,12 +1448,15 @@ Underfull \hbox (badness 2781) in paragraph at lines 37--53
 \OT1/txr/m/n/12 P(E) = prob-a-bil-ity of a fam-ily to have
  []
 
-) (./chapters/probabilities/problem7/question.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3])
-(./chapters/probabilities/problem7/solution.tex)
-(./chapters/probabilities/problem8/question.tex
+Underfull \vbox (badness 3557) has occurred while \output is active []
+
+ [5])
+(./chapters/probabilities/problem9/question.tex)
+(./chapters/probabilities/problem9/solution.tex
+File: ./figures/prob/prob8.eps Graphic file (type eps)
+ <./figures/prob/prob8.eps>)
+(./chapters/probabilities/problem10/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 []\OT1/txr/m/n/12 Prepare a fre-quency dis-tri-bu-tion ta-ble,
  []
@@ -1427,8 +1466,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-) (./chapters/probabilities/problem8/solution.tex)
-(./chapters/statics/problem1/question.tex)
+) (./chapters/probabilities/problem10/solution.tex
+File: ./figures/prob/prob10.eps Graphic file (type eps)
+ <./figures/prob/prob10.eps>) (./chapters/statics/problem1/question.tex [6])
 (./chapters/statics/problem1/solution.tex (./table/table1.tex
 \gnumericTableWidth=\skip79
 \gnumericTableWidthComplete=\skip80
@@ -1436,15 +1476,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 \gnumericColA=\skip82
 \gnumericColB=\skip83
 )
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2334) has occurred while \output is active []
 
- [4])
+)
 (./chapters/statics/problem2/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--17
 
  []
 
-) (./chapters/statics/problem2/solution.tex (./table/table2.tex))
+) (./chapters/statics/problem2/solution.tex (./table/table2.tex
+\gnumericColC=\skip84
+\gnumericColD=\skip85
+)
+Underfull \vbox (badness 7576) has occurred while \output is active []
+
+ [7])
 (./chapters/statics/problem3/question.tex
 Overfull \hbox (19.42813pt too wide) in paragraph at lines 9--20
 [][] 
@@ -1455,17 +1501,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--20
 
  []
 
-) (./chapters/statics/problem3/solution.tex (./table/table3.tex
-Overfull \hbox (20.35182pt too wide) in paragraph at lines 152--173
- [][] 
- []
+) (./chapters/statics/problem3/solution.tex (./table/table3.tex)
+Underfull \vbox (badness 5847) has occurred while \output is active []
 
-)) (./chapters/statics/problem4/question.tex
+)
+(./chapters/statics/problem4/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--19
 
  []
 
-) (./chapters/statics/problem4/solution.tex (./table/table4.tex) [5])
+) (./chapters/statics/problem4/solution.tex (./table/table4.tex) [8])
 (./chapters/statics/problem5/question.tex
 Underfull \hbox (badness 7133) in paragraph at lines 4--18
 []\OT1/txr/m/n/12 In a re-tail mar-ket, fruit ven-dors were
@@ -1481,21 +1526,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--18
 
  []
 
-) (./chapters/statics/problem5/solution.tex (./table/table5.tex))
+) (./chapters/statics/problem5/solution.tex (./table/table5.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
 (./chapters/statics/problem6/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--17
 
  []
 
-) (./chapters/statics/problem6/solution.tex (./table/table6.tex
-Overfull \hbox (10.33589pt too wide) in paragraph at lines 152--169
- [][] 
- []
+) (./chapters/statics/problem6/solution.tex (./table/table6.tex)
+Underfull \vbox (badness 3219) has occurred while \output is active []
 
-)
-Underfull \vbox (badness 4726) has occurred while \output is active []
-
- [6])
+ [9])
 (./chapters/statics/problem7/question.tex
 Overfull \hbox (3.97998pt too wide) in paragraph at lines 6--18
 [][] 
@@ -1506,16 +1549,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--19
 
  []
 
-) (./chapters/statics/problem7/solution.tex (./table/table7.tex
-Overfull \hbox (16.38405pt too wide) in paragraph at lines 152--171
- [][] 
- []
+) (./chapters/statics/problem7/solution.tex (./table/table7.tex)
+Underfull \vbox (badness 1102) has occurred while \output is active []
 
-)) (./chapters/statics/problm8/question.tex)
-(./chapters/statics/problm8/solution.tex (./table/table8.tex)
-Underfull \vbox (badness 3668) has occurred while \output is active []
-
- [7])
+)
+(./chapters/statics/problm8/question.tex)
+(./chapters/statics/problm8/solution.tex (./table/table8.tex) [10])
 (./chapters/statics/problem9/question.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--17
 []\OT1/txr/m/n/12 The fol-low-ing ta-ble gives the
@@ -1547,15 +1586,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--17
  []
 
 ) (./chapters/statics/problem9/solution.tex (./table/table9.tex))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 364.
- [8
+(./chapters/statics/problem10/question.tex
+Overfull \hbox (1.04013pt too wide) in paragraph at lines 4--18
+[] 
+ []
+
+) (./chapters/statics/problem10/solution.tex (./table/table10.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 382.
+
+[12
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 364.
-
-(./document1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 364.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 364.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 382.
+ (./document1.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 382.
 
 
 Package rerunfilecheck Warning: File `document1.out' has changed.
@@ -1564,22 +1617,22 @@ Package rerunfilecheck Warning: File `document1.out' has changed.
 
 Package rerunfilecheck Info: Checksums for `document1.out':
 (rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  08AC5D4E1A0BC3730615A55E0FD47221;3378.
+(rerunfilecheck)             After:  35519120CA2CD2669D279062814C0062;3972.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 364.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 382.
  ) 
 Here is how much of TeX's memory you used:
- 31136 strings out of 492983
- 663703 string characters out of 6134922
- 887332 words of memory out of 5000000
- 34024 multiletter control sequences out of 15000+600000
+ 31192 strings out of 492983
+ 665127 string characters out of 6134922
+ 895332 words of memory out of 5000000
+ 34051 multiletter control sequences out of 15000+600000
  55182 words of font info for 124 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 55i,12n,67p,501b,889s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,12n,67p,501b,1179s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document1.dvi (8 pages, 83668 bytes).
+Output written on document1.dvi (12 pages, 124420 bytes).

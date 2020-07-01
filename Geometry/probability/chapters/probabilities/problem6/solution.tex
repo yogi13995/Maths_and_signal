@@ -1,58 +1,36 @@
 \renewcommand{\theequation}{\theenumi}
 \begin{enumerate}[label=\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
-\item no of total families chosen for survey = 2400
+\item No of the total students participating the survey=
+200
 \\
-No of families owning 2 vehicles and earning of \rupee 10000 - \rupee13000 per month = 1
+students like the statics = 135
+\\
+P(A) = probability of student likes the statics
 \begin{align}
-P\left(A\right) &= \frac{29}{2400}
-&= 0.012
+P\left(A\right) &= \frac{135}{200}
+\\
+&= 0.675
 \end{align}
 \\
-\item No of families earning \rupee 16000 and more per month and owning exactly 1 vehicle = 579
+\item No of students do not like the statics = 65
 \\
-P(B) = probability of a family to have 1 vehicle with earning of \rupee 16000 and more 
+P(B) = probability of student does not like the statics
 \begin{align}
-P\left(B\right) &= \frac{579}{2400}
-\\
-&= 0.241
-\end{align}
-\\
-\item No of families earning  less than \rupee 7000  per month and owning exactly no vehicle = 10
-\\
-P(C) = probability of a family to have no vehicle with earning less than \rupee 7000  
-\begin{align}
-P\left(C\right) &= \frac{10}{2400}
-\\
-&= 0.0042
-\end{align}
-\item No of families earning   \rupee 13000  to \rupee 16000  per month and owning more than 2 vehicle = 25
-\\
-P(D) = probability of a family to have more than 2 vehicles with earning \rupee 13000 to \rupee 16000 per month   
-\begin{align}
-P\left(D\right) &= \frac{25}{2400}
-\\
-&= 0.0104
-\end{align}
-\item No of families owning not  more than 1 vehicle $\to$
-\\
-earning less than \rupee 7000 = 170
-\\
-earning \rupee 7000 to \rupee 10000 = 305
-\\
-earning \rupee 7000 to \rupee 10000 = 536
-\\
-earning \rupee 7000 to \rupee 10000 = 471
-\\
-earning \rupee 7000 to \rupee 10000 = 580
-\\
-total no of families  = 1892
-\\
-\\
-P(E) = probability of a family to have not more than 1vehicle    
-\begin{align}
-P\left(E\right) &= \frac{1892}{2400}
-\\
-&= 0.78833
-\end{align}
+P\left(B\right) &= \frac{65}{200}
+&= 0.325
+\end{align} 
+codes for the above equation can be get from here
+\begin{lstlisting}
+codes/prob/prob6.py
+\end{lstlisting}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{./figures/prob/prob6.eps}
+	\caption{bernouli distribution of students liking statics }
+	\label{fig:bt5}
+	\begin{lstlisting}
+	figs/prob/prob6.py
+	\end{lstlisting}
+\end{figure}
 \end{enumerate}

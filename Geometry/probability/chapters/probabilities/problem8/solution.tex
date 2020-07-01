@@ -1,39 +1,62 @@
-=\renewcommand{\theequation}{\theenumi}
+\renewcommand{\theequation}{\theenumi}
 \begin{enumerate}[label=\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
-\item P(A) be the prbability of concentration of sulpher
-
-\begin{table}[!ht]
-\begin{tabular}{ |c|c| } 
-	\hline
-	\textbf{concentration of sulphur} &\textbf{friquency}\\
-	\hline
-	0.01 &2\\ 
-	0.02 &1\\ 
-	0.03 &1\\ 
-	0.04 &2\\ 
-	0.05 &2\\ 
-	0.06 &2\\ 
-	0.07 &3\\
-	0.08 &4\\ 
-	0.09 &2\\ 
-	0.10 &1\\ 
-	0.11 &2\\ 
-	0.12 &1\\ 
-	0.13 &1\\ 
-	0.16 &1\\ 
-	0.17 &1\\ 
-	0.18 &2\\ 
-	0.20 &1\\ 
-	0.22 &1\\   
-	\hline
-\end{tabular}	
-	\caption{This is a table template}
-	\label{tab:template}
-\end{table}
-\begin{align}
-p\left(A\right) &= \frac{1+1+1}{30}
+\item no of total families chosen for survey = 2400
 \\
-&= 0.1
+No of families owning 2 vehicles and earning of \rupee 10000 - \rupee13000 per month = 1
+\begin{align}
+P\left(A\right) &= \frac{29}{2400}
+&= 0.012
 \end{align}
+\\
+\item No of families earning \rupee 16000 and more per month and owning exactly 1 vehicle = 579
+\\
+P(B) = probability of a family to have 1 vehicle with earning of \rupee 16000 and more 
+\begin{align}
+P\left(B\right) &= \frac{579}{2400}
+\\
+&= 0.241
+\end{align}
+\\
+\item No of families earning  less than \rupee 7000  per month and owning exactly no vehicle = 10
+\\
+P(C) = probability of a family to have no vehicle with earning less than \rupee 7000  
+\begin{align}
+P\left(C\right) &= \frac{10}{2400}
+\\
+&= 0.0042
+\end{align}
+\item No of families earning   \rupee 13000  to \rupee 16000  per month and owning more than 2 vehicle = 25
+\\
+P(D) = probability of a family to have more than 2 vehicles with earning \rupee 13000 to \rupee 16000 per month   
+\begin{align}
+P\left(D\right) &= \frac{25}{2400}
+\\
+&= 0.0104
+\end{align}
+\item No of families owning not  more than 1 vehicle $\to$
+\\
+earning less than \rupee 7000 = 170
+\\
+earning \rupee 7000 to \rupee 10000 = 305
+\\
+earning \rupee 7000 to \rupee 10000 = 536
+\\
+earning \rupee 7000 to \rupee 10000 = 471
+\\
+earning \rupee 7000 to \rupee 10000 = 580
+\\
+total no of families  = 1892
+\\
+\\
+P(E) = probability of a family to have not more than 1vehicle    
+\begin{align}
+P\left(E\right) &= \frac{1892}{2400}
+\\
+&= 0.78833
+\end{align}
+codes for the above equation can be get from here
+\begin{lstlisting}
+codes/prob/prob8.py
+\end{lstlisting}
 \end{enumerate}

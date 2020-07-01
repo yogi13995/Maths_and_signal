@@ -1,12 +1,30 @@
 \renewcommand{\theequation}{\theenumi}
 \begin{enumerate}[label=\arabic*.,ref=\thesubsection.\theenumi]
 \numberwithin{equation}{enumi}
-\item No of bags having weight more than g Kg = 7
-\\
-tota no of bags = 11
+\item total no of people working at the work place = 40
+no of people live less than 7km from the work place = 9
+let probability of a emgineer livinf less than 7 km from workplace = P(A)
 \begin{align}
-P\left(A\right) &= \frac{7}{11}
-\\
-&=0.636
+P\left(A\right)&=\frac{9}{40}
 \end{align}
+\item no of people live more  than or equal 7km from the work place = 31
+let probability of a emgineer livinf less than 7 km from workplace = P(B)
+\begin{align}
+P\left(B\right)&=\frac{31}{40}
+\end{align}
+\item there is no one who live within $\frac{1}{2}$ km from the work place so the probability will be 0.
+\\
+codes for the above equation can be get from here
+\begin{lstlisting}
+codes/prob/prob7.py
+\end{lstlisting}
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\columnwidth]{./figures/prob/prob7.eps}
+	\caption{probabilities a man to be near from work place}
+	\label{fig:bt7}
+	\begin{lstlisting}
+	figs/prob/prob7.py
+	\end{lstlisting}
+\end{figure}
 \end{enumerate}
