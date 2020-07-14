@@ -123,10 +123,10 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	52pt+%
-	63pt+%
-	56pt+%
-	55pt+%
+	53pt+%
+	53pt+%
+	53pt+%
+	53pt+%
 0pt}
 \def\gumericNumCols{4}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
@@ -146,10 +146,10 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{52pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{63pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{56pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{55pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{53pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{tabular}[c]{%
 	b{\gnumericColA}%
@@ -194,63 +194,83 @@
 
 \hhline{|-|-|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}Daily  wages}
+	{\gnumericPB{\centering}No of houses}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}No of workers}
+	{\gnumericPB{\centering}No of houses}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{midpoints}}
+	{\gnumericPB{\centering}midpoints}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{f.x}}
+	{\gnumericPB{\centering}fx}
 \\
 \hhline{|----|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}500-520}
+	{\gnumericPB{\centering}0-2}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{12}}
+	{\gnumericPB{\centering}1}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{510}}
+	{\gnumericPB{\centering}1}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{6120}}
+	{\gnumericPB{\centering}1}
 \\
 \hhline{|----|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{520-540}}
+	{\gnumericPB{\centering}2-4}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{14}}
+	{\gnumericPB{\centering}2}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{530}}
+	{\gnumericPB{\centering}3}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{7420}}
+	{\gnumericPB{\centering}6}
 \\
 \hhline{|----|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{540-560}}
+	{\gnumericPB{\centering}4-6}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{8}}
+	{\gnumericPB{\centering}1}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{550}}
+	{\gnumericPB{\centering}5}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{4400}}
+	{\gnumericPB{\centering}5}
 \\
 \hhline{|----|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{560-580}}
+	{\gnumericPB{\centering}6-8}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{6}}
+	{\gnumericPB{\centering}5}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{570}}
+	{\gnumericPB{\centering}7}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{3420}}
+	{\gnumericPB{\centering}35}
 \\
 \hhline{|----|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{580-600}}
+	{\gnumericPB{\centering}8-10}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{10}}
+	{\gnumericPB{\centering}6}
 	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{590}}
+	{\gnumericPB{\centering}9}
 	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{5900}}
+	{\gnumericPB{\centering}54}
+\\
+\hhline{|----|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}10-12}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}2}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}11}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}22}
+\\
+\hhline{|----|}
+	 \multicolumn{1}{|p{\gnumericColA}|}%
+	{\gnumericPB{\centering}\gnumbox{12-14}}
+	&\multicolumn{1}{p{\gnumericColB}|}%
+	{\gnumericPB{\centering}\gnumbox{3}}
+	&\multicolumn{1}{p{\gnumericColC}|}%
+	{\gnumericPB{\centering}\gnumbox{13}}
+	&\multicolumn{1}{p{\gnumericColD}|}%
+	{\gnumericPB{\centering}\gnumbox{39}}
 \\
 \hhline{|-|-|-|-|}
 \end{tabular}

@@ -30,9 +30,9 @@ for j in range(1, 22):
 prob1=event_size1/sample_size
 prob2=event_size2/sample_size
 prob3=event_size3/sample_size
-print("P(A)={}".format(prob1))
-print("P(B)={}".format(prob2))
-print("P(C)={}".format(prob3))
+print("P(X<7)={}".format(prob1))
+print("P(X>=7)={}".format(prob2))
+print("P(X<=1\2)={}".format(prob3))
 
 print(sample_size)
 objects = ('less than 7km', 'more than 7km','within 1/2 km')
