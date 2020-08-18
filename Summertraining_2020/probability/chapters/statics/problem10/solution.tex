@@ -1,0 +1,41 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\item \begin{table}[!ht]
+	\centering
+	\input{./table/table10.tex}
+	\caption{friquency distribution table10 }
+\end{table}
+\begin{align}
+\sum{f} &= 80
+\\
+\sum{f.x} &= 2830
+\\
+Mean &= \frac{\sum{f.x}}{\sum{f}}
+\\ &= \frac{2830}{801}
+\\&= 35.375
+\end{align}
+\item in this table max friquency is 23 and modal class related to it is 35-45.
+\\
+\begin{align}
+l &= 35
+\\
+h = 10
+\\
+f_1 &= 23
+\\
+f_0 &= 21
+\\
+f_2 &= 14
+\\
+Mode &= l+\frac{f_1 - f_o}{2f_1 - f_o - f_2}\times h
+\\
+&= 35+\frac{23 - 21}{2\times 23 - 21- 14}\times 10
+\\
+&=36.86
+\end{align}
+codes for the above equation can be get from here
+\begin{lstlisting}
+codes/static10.py
+\end{lstlisting}
+\end{enumerate}

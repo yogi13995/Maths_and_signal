@@ -1,0 +1,225 @@
+\documentclass{beamer}
+\usepackage{listings}
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetheme{Boadilla}
+
+\usetkzobj{all}
+
+\title{Solution For The School Geometry Problems}
+\author{Yogesh Choudhary}
+%\institute{Indian Institute of Technology, Bhilai.}
+\date{\today}
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+\section{Question}
+\begin{frame}
+\frametitle{Question}
+\begin{block}{Exercise 8.1(Q no.36)}
+Two sides AB and BC and median AM of one
+triangle ABC are respectively equal to sides PQ
+and QR and median PN of $\Delta$ PQR.Show that
+\newline
+\hyperlink{a}{\beamerbutton{a)$\Delta$ ABM $\cong$ $\Delta$ PQN}}
+\newline
+\hyperlink{b}{\beamerbutton{b)$\Delta$ ABC $\cong$ $\Delta$ PQR}}
+\newline
+
+\end{block}
+\end{frame}
+
+\section{\textbf{Construction}}
+\subsection*{Codesandfigures}
+\begin{frame}[fragile]
+\frametitle{Codes and Figures}
+\tiny
+\begin{flushleft}
+The python code for the figure is
+\begin{lstlisting}
+./code/Traingle.py
+\end{lstlisting}
+The latex- tikz code is
+\begin{lstlisting}
+./figs/triangle.tex
+\end{lstlisting}
+The above latex code can be compiled as standalone document
+\begin{lstlisting} 
+./figs/triangle_fig.tex
+\end{lstlisting}
+\end{flushleft}.
+%\begin{columns}
+%\column{0.5\textwidth}
+\begin{figure}
+\begin{minipage}{0.45\linewidth}
+\begin{subfigure}{0.5\textwidth}
+
+\begin{flushleft}
+
+\includegraphics[scale=0.275]{./figs/Triangle.eps}
+\caption{\tiny By Python}
+\end{flushleft}
+
+\end{subfigure}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\begin{subfigure}{0.5\textwidth}
+\begin{flushright}
+
+\resizebox{2.0\columnwidth}{!}{\input{./figs/triangle.tex}}
+\caption{\tiny By Latex-tikz}
+\end{flushright}
+\end{subfigure}
+\end{minipage}
+\end{figure}
+\end{frame}
+\subsection*{Construction methods}
+\begin{frame}[fragile]
+\footnotesize
+\frametitle{Construction method}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+The tables below are the values used for constructing the triangles in both Python and Latex-Tikz.
+\begin{table}[htbp]
+\centering
+  \resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{ |p{3cm}|p{3cm}|  }
+\hline
+ \multicolumn{2}{|c|}{Initial Input Values.} \\
+\hline
+a, p & 3\\
+\hline
+b, q & 5\\
+\hline
+c, r & 6\\
+\hline
+\end{tabular}
+\end{minipage}}
+\caption{\tiny To construct $\triangle ACB$ and $\triangle PQR$}
+\end{table}
+The steps for constructing $\triangle ACB$ are
+\newline
+$$(i)\vec{A}= \begin{pmatrix}3.33\\4.99\end{pmatrix}
+(ii)\vec{B}=\begin{pmatrix}0\\0\end{pmatrix}
+(iii)\vec{C}=\begin{pmatrix}3\\0\end{pmatrix}$$
+\\
+$$(i)\vec{P}= \begin{pmatrix}8.33\\4.99\end{pmatrix}
+(ii)\vec{Q}=\begin{pmatrix}5\\5\end{pmatrix}
+(iii)\vec{R}=\begin{pmatrix}8\\0\end{pmatrix}$$
+\end{column}
+\begin{column}{0.5\textwidth}
+$\vec{M}$ and $\vec{N}$ are the midpoints of BC and QR respectively 
+\\
+$$\vec{M}=\begin{pmatrix}1.5\\0\end{pmatrix},\vec{N}=\begin{pmatrix}6.5\\0\end{pmatrix}$$
+\\
+
+\begin{table}[H]
+\centering
+\resizebox{0.75\textwidth}{!}{\begin{minipage}{\textwidth}
+\begin{tabular}{ |p{2cm}|p{2cm}|  }
+\hline
+ \multicolumn{2}{|c|}{Derived Values for $triangle DCB$.} \\
+\hline
+$\vec{M}$ & $$\begin{pmatrix}1.5\\0\end{pmatrix}$$\\				
+\hline
+$\vec{N}$ & $$\begin{pmatrix}6.5\\0\end{pmatrix} $$\\
+\hline
+\end{tabular}
+\end{minipage}}
+\caption{\tiny To construct madians AN and PN}
+\end{table}
+\end{column}
+\end{columns}
+\end{frame}
+\section*{\textbf{Solution}}
+\begin{frame}[fragile]
+\footnotesize
+\frametitle{Solution}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+given that $\to$
+\\
+$$\norm{\vec{AB}} = \norm{\vec{PQ}}=c=r$$ 
+\\
+
+$$\norm{\vec{BC}}=\norm{\vec{QR}}=a=p$$ 
+\\
+
+$$\norm{\vec{AM}}=\norm{\vec{PN}}=m=n$$ 
+
+\end{column}
+\begin{column}{0.5\textwidth}
+Therefore $\to$
+\\
+
+$\vec{M}$  and $\vec{N}$ are the position vector of mid-point of $\vec{BC}$ and $\vec{QR}$ repectively .
+\newline
+$$\frac{1}{2}\norm{\vec{BC}}= \frac{1}{2}\norm{\vec{QR}}$$
+\\
+\end{column}
+\end{columns}
+\end{frame}
+\subsection{a}
+\begin{frame}
+\frametitle{Solution a)}
+\footnotesize
+\label{a}
+from triangles ABM and PQR $\to$
+\\
+$$\norm{\vec{AB}}=\norm{\vec{PQ}}(given)$$
+\\
+$$\norm{\vec{AM}}=\norm{\vec{PN}}(given)$$
+\\
+$$\norm{\vec{MB}} =\norm{\vec{NQ}}$$(Both m and N are the mid points)
+\newline
+\\
+$\implies \triangle ABM$ and $\triangle PQN$ are congruent to each other by SSS congruency.
+\\
+Hence, proved
+\end{frame}
+
+\subsection{a}
+\begin{frame}
+	\frametitle{Solution b)}
+	\footnotesize
+	\label{b}
+		given that $\to$
+	\\
+	$$\norm{\vec{MC}} = \norm{\vec{NR}}$$ 
+	\\
+	$$\because \Delta ABM \cong \Delta PQN $$
+	\\
+	$$\implies \angle AMC = \angle PNR$$
+	
+	from SAS congurancy $ \to$
+	\\
+	$$\Delta AMC \cong \Delta PNR$$
+	\\
+	$$\implies \norm{\vec{AC}} = \norm{\vec{PR}}$$
+	\\
+	Thus from the triangle ABC ,PQR and by SSS congurancy 
+	$$\Delta ABC \cong \Delta PQR$$
+	\centering Hence proved
+\end{frame}
+
+\end{document}
