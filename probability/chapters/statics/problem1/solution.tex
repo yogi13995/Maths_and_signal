@@ -1,0 +1,24 @@
+\renewcommand{\theequation}{\theenumi}
+\begin{enumerate}[label=\arabic*.,ref=\thesubsection.\theenumi]
+\numberwithin{equation}{enumi}
+\item 
+\begin{table}[!ht]
+\centering
+\input{./table/table1.tex}
+\caption{friquency distribution table1 }
+\end{table}
+\begin{align}
+\sum{f} &= 20
+\\
+\sum{f.x} &= 162
+\\
+Mean &= \frac{\sum{f.x}}{\sum{f}}
+\\&= \frac{162}{20}
+\\
+&= 8.1
+\end{align}
+codes for the above equations can be get from
+\begin{lstlisting}
+codes/static1.py
+\end{lstlisting}
+\end{enumerate}
