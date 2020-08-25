@@ -16,11 +16,11 @@ simlen = bitsimlen / 3;
 %Generating bits
 bits = randi([0,1],1,bitsimlen);
 
+
 s = zeros(8,2);
 for i = 1:8
 	s(i,:) = [cos((i-1)*2*pi/8)  sin((i-1)*2*pi/8)];
 end
-
 % Converting bits into gray code
 symbol_lst=symb(bits,simlen,s);
 symbol=symbol_lst.';
@@ -66,8 +66,9 @@ for k = 1:snrlen
             t=t+1;
         end
     end
-  
+    disp(t);
     ser(k)= 1-(t/simlen);
+    disp(ser(k));
     ser_anal(k) = 2*qfunc(sqrt(snr(k))*sin(pi/8));
     brx=brx.';
     brx = reshape(brx,[1,bitsimlen]);
@@ -77,6 +78,7 @@ for k = 1:snrlen
     
 end
 
+save ("-ascii", "psk.dat","snr_db","ser_anal","ser","ber");
 %Plots
 close all; figure
 semilogy(snr_db,ser_anal,'o')
