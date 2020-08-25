@@ -1,66 +1,31 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import math
+from function import *
 
+#SNR range
 snrlen = 10
+
+#SNR in dB and actual per bit 
+#(Check Proakis for factor of 6)
 snr_db = np.linspace(0,snrlen,snrlen)
 snr = 6.0*10.0**(0.1*snr_db)
-bitsimlen = 99999
-simlen = bitsimlen//3
 
+#Bitstream size
+bitsimlen = 99999
+#Symbol stream size
+simlen = bitsimlen//3
+#Generating bits
 bits = np.random.randint(2, size=(1,bitsimlen))
 
 
-
+#Converting bits into gray code
 s = np.zeros((8,2))
 for i in range(0,8):
 	s[i,:] = (math.cos((i)*2*math.pi/8), math.sin((i)*2*math.pi/8))
 
 
-def mapping(b0,b1,b2,s):
-	if b0 == 0 and b1 == 0 and b2 == 0:
-		return s[0,:]
-	elif b0 ==0 and b1 == 0 and b2 == 1:
-		return s[1,:]
-	elif b0 == 0 and b1 == 1 and b2 == 1:
-		return s[2,:]
-	elif b0 == 0 and b1 == 1 and b2 == 0:
-		return s[3,:]
-	elif b0 == 1 and b1 == 1 and b2 == 0:
-		return s[4,:]
-	elif b0 == 1 and b1 == 1 and b2 == 1:
-		return s[5,:]
-	elif b0 == 1 and b1 == 0 and b2 == 1:
-		return s[6,:]
-	elif b0 == 1 and b1 == 0 and b2 == 0:
-		return s[7,:]
 
-
-
-def symb(bits,simlen,s):
-	i=0
-	symbol = np.zeros((simlen,2))
-	for k in range(i,simlen):
-		map1 = mapping(bits[0,i],bits[0,i+1],bits[0,i+2],s)
-		symbol[k,:]=map1
-		i = i+3
-	return symbol
-	
-def decodecomp(vec_comp, A):
-	vec = np.zeros((2, 1))
-	#print(vec_comp)
-	vec[0,0] = vec_comp.real
-	vec[1, 0] = vec_comp.imag
-	for i in range(0,8):
-		y1 = np.matmul([A[i, :, 0],A[i, :, 1]],vec)
-		if (y1[0,0] >=0 and y1[1,0] >=0):
-			y=i
-			return y
-
-def qfunc(x):
-	y = 0.5*math.erfc(x/math.sqrt(2))
-	return y
-	
 		
 symbol_list = symb(bits, simlen, s)
 symbol = np.transpose(symbol_list)	
@@ -116,6 +81,8 @@ for k in range(0,snrlen):
 	#print(np.count_nonzero(bit_diff))
 	ber.append(np.count_nonzero(bit_diff)/bitsimlen)
 
+
+#plots
 plt.grid(True, which = "both")
 plt.semilogy(snr_db, ser_ana, label='SER Analysis')
 plt.semilogy(snr_db, ser, 'o', label = 'SER Simulation')
