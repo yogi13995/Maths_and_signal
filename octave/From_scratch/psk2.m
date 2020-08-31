@@ -16,11 +16,7 @@ simlen = bitsimlen / 3;
 %Generating bits
 bits = randi([0,1],1,bitsimlen);
 
-
-s = zeros(8,2);
-for i = 1:8
-	s(i,:) = [cos((i-1)*2*pi/8)  sin((i-1)*2*pi/8)];
-end
+s = PSKGen();
 % Converting bits into gray code
 symbol_lst=symb(bits,simlen,s);
 symbol=symbol_lst.';
@@ -31,7 +27,7 @@ ser_anal=zeros(1,snrlen);
 ber=zeros(1,snrlen);
 
 gray = zeros(8,3);
-gray = graycode()
+gray = graycode();
   
 A= zeros(8,2,2);
 A(1,:,:) = [sqrt(2)-1 sqrt(2)-1; 1 -1];
