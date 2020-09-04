@@ -1,4 +1,4 @@
-function y = decodecomp(rex,A,gray)
+function y = decodecomp2(rex,A)
 
 for j = 1:length(rex)
     vec=zeros(2,1);
@@ -10,7 +10,7 @@ for j = 1:length(rex)
                 y2 = i;
             end
     end
- brx(j,:)= gray(y2,:);
+ brx(1,j)= y2;
 end
 y = brx;
 end
