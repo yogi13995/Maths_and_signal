@@ -14,6 +14,9 @@ kk=log2(ConstellationSize);
 EsN0dB = EbN0dB+10*log10(kk);   % Adding 3 dB to SNR as we are calculating Symbol Error Rate
 
 nFrame = 2000;
+%NO of rampbits
+Rampbits = 42;
+Rampsymblen = 42/3;
 %No of bits per frame
 PayloadBitsLen = 240*3;
 %No of symbols per frame
@@ -42,7 +45,8 @@ gray = graycode();
 A= DemodMatrix();
 
 pilot_sym = transpose(symb(DataSym2,length(DataSym2),s));   % 8-PSK modulation
-
+rampsym2 = zeros(14,3);
+rampsym = transpose(symb(rampsym2,length(rampsym2),s));
 SER_MMSE=zeros(1,length(EsN0dB));
 
 for i=1:length(EsN0dB)
@@ -57,6 +61,18 @@ for i=1:length(EsN0dB)
          h = h/sqrt(ChannelFilterLen);
          h_est = 0; 
          s_p =  0;
+         h_est_N = 0;
+         s_N = 0;
+         
+         %noise power
+         Rk_pN = conv(h,rampsym);
+         noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+         noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
+         y_pN = Rk_pN + noise;
+         h_hat_N = channel_Estimation_fft(rampsym,y_pN,ChannelFilterLen);
+         h_est_N = h_est_N + h_hat_N(1:ChannelFilterLen);
+         s_N = s_N + norm(y_pN)^2;
+         s_Navg = s_N/14;
          % Channel estimation
          for k = 1:5
               pilot_sym1 = pilot_sym((kk-1)*10+1:(kk-1)*10+10);
@@ -66,9 +82,11 @@ for i=1:length(EsN0dB)
               y_p = Rk_p + noise;
               h_hat = channel_Estimation_fft(pilot_sym1,y_p,ChannelFilterLen);
               h_est = h_est + h_hat(1:ChannelFilterLen);
-              s_p = s_p + norm(h_hat)^2
+              s_p = s_p + norm(h_hat)^2;
          end
-         s_pavg = s_p/50;
+         s_pavg = s_p/(50*10e12);
+         SNR_est = 10*log10(s_pavg/s_Navg)
+         disp(EbN0dB(i));
          h_est_av = h_est/5;
          w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1,EsN01in);
 
