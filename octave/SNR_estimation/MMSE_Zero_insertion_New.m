@@ -67,7 +67,7 @@ for i=1:length(EsN0dB)
          %noise power
          for l = 1:14
           noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
-          noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
+          noise=noiseSigma*(randn(5,1)+1i*randn(5,1));
           y_pN =  noise;
           s_N = s_N + norm(y_pN)^2;
          end
