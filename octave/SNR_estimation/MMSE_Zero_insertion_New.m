@@ -66,8 +66,6 @@ for i=1:length(EsN0dB)
          
          %noise power
          for l = 1:14
-          rampsym = rampsym0(l);
-          Rk_pN = conv(h,rampsym);
           noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
           noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
           y_pN =  noise;
