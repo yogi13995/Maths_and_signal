@@ -65,14 +65,15 @@ for i=1:length(EsN0dB)
          s_N = 0;
          
          %noise power
-         Rk_pN = conv(h,rampsym);
-         noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
-         noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
-         y_pN = Rk_pN + noise;
-         h_hat_N = channel_Estimation_fft(rampsym,y_pN,ChannelFilterLen);
-         h_est_N = h_est_N + h_hat_N(1:ChannelFilterLen);
-         s_N = s_N + norm(y_pN)^2;
-         s_Navg = s_N/14;
+         for l = 1:14
+          rampsym = rampsym0(l);
+          Rk_pN = conv(h,rampsym);
+          noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+          noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
+          y_pN =  noise;
+          s_N = s_N + norm(y_pN)^2;
+         end
+          s_Navg = s_N/(14)
          % Channel estimation
          for k = 1:5
               pilot_sym1 = pilot_sym((kk-1)*10+1:(kk-1)*10+10);
