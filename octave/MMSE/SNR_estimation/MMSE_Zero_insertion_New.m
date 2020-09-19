@@ -46,7 +46,7 @@ A= DemodMatrix();
 
 pilot_sym = transpose(symb(DataSym2,length(DataSym2),s));   % 8-PSK modulation
 rampsym2 = zeros(14,3);
-rampsym = transpose(symb(rampsym2,length(rampsym2),s));
+rampsym0 = transpose(symb(rampsym2,length(rampsym2),s));
 SER_MMSE=zeros(1,length(EsN0dB));
 
 for i=1:length(EsN0dB)
@@ -65,14 +65,15 @@ for i=1:length(EsN0dB)
          s_N = 0;
          
          %noise power
-         Rk_pN = conv(h,rampsym);
-         noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
-         noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
-         y_pN = Rk_pN + noise;
-         h_hat_N = channel_Estimation_fft(rampsym,y_pN,ChannelFilterLen);
-         h_est_N = h_est_N + h_hat_N(1:ChannelFilterLen);
-         s_N = s_N + norm(y_pN)^2;
-         s_Navg = s_N/14;
+         for l = 1:14
+          rampsym = rampsym0(l);
+          Rk_pN = conv(h,rampsym);
+          noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+          noise=noiseSigma*(randn(length(Rk_pN),1)+1i*randn(length(Rk_pN),1));
+          y_pN =  noise;
+          s_N = s_N + norm(y_pN)^2;
+         end
+          s_Navg = s_N/(14)
          % Channel estimation
          for k = 1:5
               pilot_sym1 = pilot_sym((kk-1)*10+1:(kk-1)*10+10);
@@ -86,9 +87,9 @@ for i=1:length(EsN0dB)
          end
          s_pavg = s_p/(50*10e12);
          SNR_est = 10*log10(s_pavg/s_Navg)
-         disp(EbN0dB(i));
+         disp(EsN01in);
          h_est_av = h_est/5;
-         w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1,EsN01in);
+         w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1, SNR_est);
 
              DataSym = randi([0 1],(PayloadBitsLen /2),1);
              DataSym1=reshape(DataSym,3,[]);
@@ -99,7 +100,7 @@ for i=1:length(EsN0dB)
              Rk = conv(h,m_psk1);
              Rk1 = reshape(Rk,[244,1]);
              
-             noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+             noiseSigma=1/sqrt(2)*sqrt(1/(2* SNR_est));
              noise=noiseSigma*(randn(length(Rk),1)+1i*randn(length(Rk),1));
             
              y = Rk1 + noise;   % Received symbols with AWGN noise
