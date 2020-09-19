@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import math
 
 x1 = np.loadtxt('MMSE_py1.dat', dtype = 'double')
-x2 = np.loadtxt('MMSE_py2.dat', dtype = 'double')
+x2 = np.loadtxt('MMSE_py.dat', dtype = 'double')
 
 EbN01 = np.vstack((x1[0,:]))
 SER_MMSE1 = np.vstack((x1[1,:]))
