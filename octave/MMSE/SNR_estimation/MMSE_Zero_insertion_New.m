@@ -45,8 +45,7 @@ gray = graycode();
 A= DemodMatrix();
 
 pilot_sym = transpose(symb(DataSym2,length(DataSym2),s));   % 8-PSK modulation
-rampsym2 = zeros(14,3);
-rampsym0 = transpose(symb(rampsym2,length(rampsym2),s));
+rampsym = zeros(14,3);
 SER_MMSE=zeros(1,length(EsN0dB));
 
 for i=1:length(EsN0dB)
@@ -61,7 +60,6 @@ for i=1:length(EsN0dB)
          h = h/sqrt(ChannelFilterLen);
          h_est = 0; 
          s_p =  0;
-         h_est_N = 0;
          s_N = 0;
          
          %noise power
