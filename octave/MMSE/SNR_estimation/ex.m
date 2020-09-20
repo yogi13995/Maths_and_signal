@@ -63,15 +63,18 @@ for i=1:length(EsN0dB)
          s_p =  0;
          h_est_N = 0;
          s_N = 0;
+         y_pN = 0;
+          y_p = 0;
          
          %noise power
 
         for l = 1:14
           noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
           noise=noiseSigma*(randn(5,1)+1i*randn(5,1));
-          y_pN =  noise;
-          s_N = s_N + norm(y_pN)^2;
+          y_pN =  y_pN + noise;
+          s_N = s_N + norm(noise)^2;
          end
+          y_pN_avg = y_pN/14;
           s_Navg = s_N/(14)
          % Channel estimation
          for k = 1:5
@@ -79,13 +82,14 @@ for i=1:length(EsN0dB)
               Rk_p = conv(h,pilot_sym1);
               noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
               noise=noiseSigma*(randn(length(Rk_p),1)+1i*randn(length(Rk_p),1));
-              y_p = Rk_p + noise;
+              y_p = y_p +  Rk_p + noise;
               h_hat = channel_Estimation_fft(pilot_sym1,y_p,ChannelFilterLen);
               %h_est = h_est + h_hat(1:ChannelFilterLen);
-              s_p = s_p + norm(h_hat)^2;
+              %s_p = s_p + norm(y_p)^2 ;
          end
-         s_pavg = s_p/(50*10e12)
-         SNR_est = 10*log10(s_pavg/s_Navg)
+         y_p_avg = y_p/50;
+         s_pavg = ((norm(y_p_avg)^2) - s_Navg) 
+         SNR_est = (s_pavg/s_Navg)
          disp(EsN01in);
          h_est_av = h_est/5;
          w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1,EsN01in);

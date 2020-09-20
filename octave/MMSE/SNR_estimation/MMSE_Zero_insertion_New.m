@@ -61,8 +61,9 @@ for i=1:length(EsN0dB)
          h = h/sqrt(ChannelFilterLen);
          h_est = 0; 
          s_p =  0;
-         h_est_N = 0;
          s_N = 0;
+       
+        
          
          %noise power
          for l = 1:14
@@ -81,9 +82,9 @@ for i=1:length(EsN0dB)
               y_p = Rk_p + noise;
               h_hat = channel_Estimation_fft(pilot_sym1,y_p,ChannelFilterLen);
               h_est = h_est + h_hat(1:ChannelFilterLen);
-              s_p = s_p + norm(h_hat)^2;
+              s_p = s_p + norm(y_p)^2 - s_Navg;
          end
-         s_pavg = s_p/(50*10e12);
+         s_pavg = (s_p/50)
          SNR_est = (s_pavg/s_Navg);
          disp(EsN01in);
          h_est_av = h_est/5;
