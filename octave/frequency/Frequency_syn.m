@@ -3,7 +3,7 @@ clear all;
 close all;
 
 variance = 1;
-simlen = 18;
+simlen = 50;
 Ts = 1e-9;
 theta = 0;
 v=zeros(simlen,1)+1j*zeros(simlen,1);
@@ -13,10 +13,10 @@ k=transpose(linspace(1,simlen,simlen));
 A=transpose(linspace(1,5,simlen));
 estimate=zeros(length(A),1);
 for kk=1:length(A)
-delf=5e6;
+delf=5e4;
 r1=zeros(simlen,1)+1j*(2*pi*delf*(k-1)*Ts+theta);
 r=A(kk).*exp(r1)+V;
-M=18;
+M=50;
 fnm=0;
 fdm=0;
 for i=0:M-1
