@@ -123,12 +123,10 @@
 \setlongtables
 
 \setlength\gnumericTableWidth{%
-	37pt+%
-	140pt+%
-	106pt+%
-	336pt+%
+	132pt+%
+	132pt+%
 0pt}
-\def\gumericNumCols{4}
+\def\gumericNumCols{2}
 \setlength\gnumericTableWidthComplete{\gnumericTableWidth+%
          \tabcolsep*\gumericNumCols*2+\arrayrulewidth*\gumericNumCols}
 \ifthenelse{\lengthtest{\gnumericTableWidthComplete > \linewidth}}%
@@ -146,16 +144,12 @@
 %%                                                                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{37pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{140pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColC}}{\newlength{\gnumericColC}}{}\settowidth{\gnumericColC}{\begin{tabular}{@{}p{106pt*\gnumericScale}@{}}x\end{tabular}}
-\ifthenelse{\isundefined{\gnumericColD}}{\newlength{\gnumericColD}}{}\settowidth{\gnumericColD}{\begin{tabular}{@{}p{336pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColA}}{\newlength{\gnumericColA}}{}\settowidth{\gnumericColA}{\begin{tabular}{@{}p{132pt*\gnumericScale}@{}}x\end{tabular}}
+\ifthenelse{\isundefined{\gnumericColB}}{\newlength{\gnumericColB}}{}\settowidth{\gnumericColB}{\begin{tabular}{@{}p{132pt*\gnumericScale}@{}}x\end{tabular}}
 
 \begin{longtable}[c]{%
 	b{\gnumericColA}%
 	b{\gnumericColB}%
-	b{\gnumericColC}%
-	b{\gnumericColD}%
 	}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,220 +160,101 @@
 %%  the first, last or every page. Use \multicolumn if you want.    %%
 
 %%  Header for the first page.                                      %%
-%	\multicolumn{4}{c}{The First Header} \\ \hline 
+%	\multicolumn{2}{c}{The First Header} \\ \hline 
 %	\multicolumn{1}{c}{colTag}	%Column 1
-%	&\multicolumn{1}{c}{colTag}	%Column 2
-%	&\multicolumn{1}{c}{colTag}	%Column 3
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endfirsthead
 
 %%  The running header definition.                                  %%
 %	\hline
-%	\multicolumn{4}{l}{\ldots\small\slshape continued} \\ \hline
+%	\multicolumn{2}{l}{\ldots\small\slshape continued} \\ \hline
 %	\multicolumn{1}{c}{colTag}	%Column 1
-%	&\multicolumn{1}{c}{colTag}	%Column 2
-%	&\multicolumn{1}{c}{colTag}	%Column 3
 %	&\multicolumn{1}{c}{colTag}	\\ \hline %Last column
 %	\endhead
 
 %%  The running footer definition.                                  %%
 %	\hline
-%	\multicolumn{4}{r}{\small\slshape continued\ldots} \\
+%	\multicolumn{2}{r}{\small\slshape continued\ldots} \\
 %	\endfoot
 
 %%  The ending footer definition.                                   %%
-%	\multicolumn{4}{c}{That's all folks} \\ \hline 
+%	\multicolumn{2}{c}{That's all folks} \\ \hline 
 %	\endlastfoot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	 \multicolumn{4}{p{	\gnumericColA+%
-	\gnumericColB+%
-	\gnumericColC+%
-	\gnumericColD+%
-	\tabcolsep*2*3}|}%
-	{\gnumericPB{\centering}\gnumbox{\textbf{Frequency offeset Estimation variable }}}
-\\
-\hhline{|-|-|-|-|}
+\hhline{|-|-}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{No}}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{Perameter}}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{variable name }}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{Dimensions}}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{value }}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{\textbf{Value}}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Symbol length}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{A}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[1.000; 1.2353; 1.4706 ...4.7647; 5.0000]}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{1ns}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{2}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Frame length}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{M}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{5,10,20,30,40}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{50 ns}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{3}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Frequency offset}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{RK}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{2.3530 + 0.98340i}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{50KHz}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{4}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Corelation index}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{Ts}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{$1x1$}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{$1.00E-09$}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{20}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{5}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Bandwidth}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{V}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[2.588 + 0.4577i; 1.073 + 0.924i;...1.111 + 0.1142i]}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{2.5MHz}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{6}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Bit duration}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{delf}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{5000000}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{-}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{7}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Amplitude}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{estimate}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[0.552209; 0.55271; 0.53406...0.24770]}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{1 - 5 V}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{8}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Modem}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{f\_hat}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{$1x1$}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{$3.76E+06$}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Multicarrier sysem}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{9}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{No of subcarriers}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{fdm}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1479.9}}
-\\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{10}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{fnm}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{34.976}}
-\\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{11}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{r}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[7.5880 + 0.4577i;  6.0709 + 1.0817i;....5.4149 + 2.6594i]}}
-\\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{12}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{r1}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[0.00000 + 0.00000i; 0.00000 + 0.03142i...0.00000 + 0.53407i]}}
-\\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{13}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{simlen}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
 	{\gnumericPB{\raggedright}\gnumbox[l]{50}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{14}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Bit rate}}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{theta}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{0}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{-}}
 \\
-\hhline{|----|}
+\hhline{|--|}
 	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{15}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{Modulation }}
 	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{tot}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{ 42.305 + 17.701i}}
+	{\gnumericPB{\raggedright}\gnumbox[l]{-}}
 \\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{16}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{v}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{18x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{[0; 0;....0; 0]}}
-\\
-\hhline{|----|}
-	 \multicolumn{1}{|p{\gnumericColA}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{17}}
-	&\multicolumn{1}{p{\gnumericColB}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{variance}}
-	&\multicolumn{1}{p{\gnumericColC}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1x1}}
-	&\multicolumn{1}{p{\gnumericColD}|}%
-	{\gnumericPB{\raggedright}\gnumbox[l]{1}}
-\\
-\hhline{|-|-|-|-|}
+\hhline{|-|-|}
 \end{longtable}
 
 \ifthenelse{\isundefined{\languageshorthands}}{}{\languageshorthands{\languagename}}
