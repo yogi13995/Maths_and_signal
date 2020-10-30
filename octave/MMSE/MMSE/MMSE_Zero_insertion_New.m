@@ -44,7 +44,6 @@ A= DemodMatrix();
 pilot_sym = transpose(symb(DataSym2,length(DataSym2),s));   % 8-PSK modulation
 
 SER_MMSE=zeros(1,length(EsN0dB));
-
 for i=1:length(EsN0dB)
      nErr_mmse = 0;
      EsN01in=10.^(EsN0dB(i)/10);
@@ -58,7 +57,7 @@ for i=1:length(EsN0dB)
          h_est = 0; 
          % Channel estimation
          for k = 1:5
-              pilot_sym1 = pilot_sym((kk-1)*10+1:(kk-1)*10+10);
+              pilot_sym1 = pilot_sym((k-1)*10+1:(k-1)*10+10);
               Rk_p = conv(h,pilot_sym1);
               noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
               noise=noiseSigma*(randn(length(Rk_p),1)+1i*randn(length(Rk_p),1));

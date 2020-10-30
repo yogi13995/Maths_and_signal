@@ -1,6 +1,10 @@
 clc;
 clear;
 close all;
+
+Ts = 1e-9;
+%frequency
+delf = 10e4
 %Frame Duration
 FrameDuration=2e-3; 
 SNR = 1; %Signal to noise ratio
@@ -13,10 +17,7 @@ EbN0dB=0:1:15;  % SNR in dB
 kk=log2(ConstellationSize);   
 EsN0dB = EbN0dB+10*log10(kk);   % Adding 3 dB to SNR as we are calculating Symbol Error Rate
 
-nFrame = 20;
-%NO of rampbits
-Rampbits = 42;
-Rampsymblen = 42/3;
+nFrame = 1000;
 %No of bits per frame
 PayloadBitsLen = 240*3;
 %No of symbols per frame
@@ -44,12 +45,15 @@ gray = zeros(8,3);
 gray = graycode(); 
 A= DemodMatrix();
 
-pilot_sym = transpose(symb(DataSym2,length(DataSym2),s));   % 8-PSK modulation
-rampsym = zeros(14,3);
+for j= 1:5
+  pilot_sym(j,:) = (symb(DataSym2,length(DataSym2),s,j));   % 8-PSK modulation
+end
+pilot_sym  = transpose(pilot_sym);
+  
 SER_MMSE=zeros(1,length(EsN0dB));
 
 for i=1:length(EsN0dB)
-     nErr_mmse = 0;
+     nErr_mmse = [0,0,0,0,0];
      EsN01in=10.^(EsN0dB(i)/10);
      for j = 1:nFrame
          h1 = randn(ChannelFilterLen-1,1);
@@ -59,52 +63,40 @@ for i=1:length(EsN0dB)
          h = [1; h] ;                 % Rician fading channel
          h = h/sqrt(ChannelFilterLen);
          h_est = 0; 
-         s_p =  0;
-         s_N = 0;
-         
-         %noise power
-         for l = 1:14
-          noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
-          noise=noiseSigma*(randn(5,1)+1i*randn(5,1));
-          y_pN =  noise;
-          s_N = s_N + norm(y_pN)^2;
-         end
-          s_Navg = s_N/(14);
          % Channel estimation
-         for k = 1:5
-              pilot_sym1 = pilot_sym((kk-1)*10+1:(kk-1)*10+10);
-              Rk_p = conv(h,pilot_sym1);
-              noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
-              noise=noiseSigma*(randn(length(Rk_p),1)+1i*randn(length(Rk_p),1));
-              y_p = Rk_p + noise;
-              h_hat = channel_Estimation_fft(pilot_sym1,y_p,ChannelFilterLen);
-              h_est = h_est + h_hat(1:ChannelFilterLen);
-              s_p = s_p + norm(h_hat)^2;
-         end
-         s_pavg = s_p/(50*10e12);
-         SNR_est = (s_pavg/s_Navg);
-         disp(EsN01in);
+         for l = 1:5%loop for 5 carrier frequency
+          for k = 1:5
+                pilot_sym1 = pilot_sym(((k-1)*10+1:(k-1)*10+10),l);
+                Rk_p = conv(h,pilot_sym1);
+                noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+                noise=noiseSigma*(randn(length(Rk_p),1)+1i*randn(length(Rk_p),1));
+                y_p = Rk_p + noise;
+                h_hat = channel_Estimation_fft(pilot_sym1,y_p,ChannelFilterLen);
+                h_est = h_est + h_hat(1:ChannelFilterLen);
+          end
          h_est_av = h_est/5;
-         w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1, SNR_est);
-
+         w = MMSE_matrix(h_est_av,length(h)+ChannelEstSymbols-1,EsN01in);
+         w_matrix(l,:,:) = w;
+         end
              DataSym = randi([0 1],(PayloadBitsLen /2),1);
              DataSym1=reshape(DataSym,3,[]);
              DataSym2=transpose(DataSym1);
-            
-             m_psk = symb(DataSym2,length(DataSym2),s);
-             m_psk1 = zero_padding(m_psk);
-             Rk = conv(h,m_psk1);
-             Rk1 = reshape(Rk,[244,1]);
+           
+             for l= 1:5
+              m_psk = (symb(DataSym2,length(DataSym2),s,l)); 
+              m_psk1 = zero_padding(m_psk);  % 8-PSK modulation
+              Rk = conv(h,m_psk1);
+              Rk1 = reshape(Rk,[244,1]);
              
-             noiseSigma=1/sqrt(2)*sqrt(1/(2* SNR_est));
-             noise=noiseSigma*(randn(length(Rk),1)+1i*randn(length(Rk),1));
+              noiseSigma=1/sqrt(2)*sqrt(1/(2*EsN01in));
+              noise=noiseSigma*(randn(length(Rk),1)+1i*randn(length(Rk),1));
             
-             y = Rk1 + noise;   % Received symbols with AWGN noise
+              y = Rk1 + noise;   % Received symbols with AWGN noise
              
       
-             X_hat = [];
-             nErr_frame = 0;
-             for jj = 1:(PayloadSymbsLen /8)
+              X_hat = [];
+              nErr_frame = 0;
+              for jj = 1:(PayloadSymbsLen /8)
                  y1 = y((jj-1)*8+1:(jj-1)*8+8);
                  x_hat = w*y1;
                  x_hat3=decodecomp(x_hat,A,gray);
@@ -113,25 +105,33 @@ for i=1:length(EsN0dB)
                  X_hat = [X_hat;x_hat5];
               
               end              
-              nErr_mmse = nErr_mmse + sum(DataSym~=X_hat);
+              nErr_mmse(l) = nErr_mmse(l) + sum(DataSym~=X_hat);
+             end
              
-       end
-      SER_MMSE(i) = nErr_mmse/(3*N)
-   end
+      end
+      SER_MMSE = (nErr_mmse/(3*N));
+      ser_matrix(i,:) = SER_MMSE;
+  end
 
 EbN0=10.^(EbN0dB/10);
  theoreticalSER=(1/kk)*(erfc(sqrt(EbN0*log2(ConstellationSize))*sin(pi/ConstellationSize)));
  theory_bpsk = 1.0/2* erfc(sqrt(EbN0));
 
- save("-ascii","MMSE_py.dat","EbN0dB","SER_MMSE");
+ save("-ascii","MMSE_py1.dat","EbN0dB");
+ save("-ascii","MMSE_py2.dat","ser_matrix");
  
- semilogy(EbN0dB,(SER_MMSE),'m-*');
+ semilogy(EbN0dB,(ser_matrix(:,1)),'m-*');
 hold on;
-
+ semilogy(EbN0dB,(ser_matrix(:,2)),'m-*');
+hold on;
+semilogy(EbN0dB,(ser_matrix(:,3)),'m-*');
+hold on;
+ semilogy(EbN0dB,(ser_matrix(:,4)),'m-*');
+hold on;
+semilogy(EbN0dB,(ser_matrix(:,5)),'m-*');
+hold on;
 
 legend('MMSE','TheoryBER','TheoryBPSK','location','best');
 xlabel('$\frac{E_s}{N_0}$(dB)','Interpreter','latex');
 ylabel('$P_e$','Interpreter','latex');
 grid on;
-
-
